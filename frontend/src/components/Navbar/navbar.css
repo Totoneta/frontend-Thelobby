@@ -1,0 +1,116 @@
+/* Container  */
+.navbar-container {
+    width: 100%;
+}
+
+.list-navbar {
+    list-style: none;
+    background-color: #09092B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/* Items izquierda */
+.navbar-left-container {
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+}
+
+/* Items derecha */
+.navbar-right-container {
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+}
+
+/* Opciones del navbar */
+.item-navbar-l,
+.item-navbar-r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.item-navbar-r:hover{
+    background-color: #36b5ff53;
+}
+
+.item-navbar-r>img {
+    height: 1.5rem;
+}
+
+
+/* Estilos personalizados */
+.btns{
+    border-radius: 10px;
+    height: 3rem;
+    width: 6rem;
+    padding: .1rem;
+    cursor: pointer;
+}
+
+.btn-ingresar {
+    border-radius: 10px;
+    height: 3rem;
+    width: 7rem;
+    padding: .1rem .2rem;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid #36B6FF;
+    color: #36B6FF;
+}
+
+.btn-menu>img{
+    height: 2rem;
+    width: 2rem;
+}
+
+/* Lupa */
+.lupa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: .3rem;
+}
+
+.input-buscar {
+    width: 14rem;
+    height: 2.3rem;
+    padding: .5rem ;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #36B6FF;
+    border-right: none;
+    transition: all .8s;
+}
+
+.btns-lupa{
+    border-radius: 10px;
+    width: 3rem;
+    height: 2.3rem;
+    padding: .5rem;
+    cursor: pointer;
+    border: 1px solid #36B6FF;
+}
+
+/* Mostrar u Ocultar */
+.nshow {
+    opacity: 0;
+    width: 0;
+}
