@@ -5,7 +5,7 @@ import NavBar from "../components/Navbar/navbar";
 /* Páginas */
 import InicioPage from "../page/inicio page/iniciopage";
 import PerfilPage from "../page/perfil page/perfilpage";
-import IniciarSesionPage from "../page/iniciarsesion/iniciarsesionpage";
+import { IniciarSesionPage } from "../page/iniciarsesion/iniciarsesionpage";
 import RegistrarsePage from "../page/registrarse/registrarsepage";
 
 export default function Rutas() {
@@ -23,7 +23,7 @@ export default function Rutas() {
             <NavBar />
             <Routes>
                 {/* Rutas Página */}
-                <Route path="/" element={<InicioPage />} />
+                <Route path="/" element={<InicioPage />}  />
                 <Route path="/juegos" element={<InicioPage />} />
                 <Route path="/competiciones" element={<InicioPage />} />
                 <Route path="/equipos" element={<InicioPage />} />

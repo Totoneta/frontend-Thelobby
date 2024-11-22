@@ -1,4 +1,4 @@
-import CallUserData from "../../api call/userdata";
+import CallUserData from "../../api_call/userdata";
 
 export default function PerfilPage() {
     return(
