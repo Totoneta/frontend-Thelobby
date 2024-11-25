@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import NavBar from "../components/Navbar/navbar";
 
 /* Páginas */
-import InicioPage from "../page/inicio page/iniciopage";
-import PerfilPage from "../page/perfil page/perfilpage";
-import { IniciarSesionPage } from "../page/iniciarsesion/iniciarsesionpage";
-import RegistrarsePage from "../page/registrarse/registrarsepage";
+import InicioPage from "../page/iniciopage/iniciopage";
+import PerfilPage from "../page/perfilpage/perfilpage";
+import { IniciarSesionPage } from "../page/iniciarsesionpage/iniciarsesionpage";
+import RegistrarsePage from "../page/registrarsepage/registrarsepage";
 
 export default function Rutas() {
     const navigate = useNavigate();

@@ -1,0 +1,41 @@
+.formularioiniciarcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 20rem;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.formularioiniciarusername,
+.formularioiniciarpassword {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+}
+
+/* Inputs */
+.formularioiniciarusername>input,
+.formularioiniciarpassword>input {
+    width: 100%;
+    padding: .3rem;
+    outline: none;
+    border-radius: 5px;
+}
+
+/* Botón Envíar */
+.formularioiniciarcontainer>button {
+    padding: .5rem .8rem;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+
+.formularioiniciarcontainer>button:hover {
+    background-color: #c7c7c7;
+}

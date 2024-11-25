@@ -1,0 +1,15 @@
+.notengocuentacontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.notengocuentacontainer>a {
+    color: #090e9e;
+}
+
+.notengocuentacontainer>a:hover {
+    color: #030534;
+}

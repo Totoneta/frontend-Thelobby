@@ -1,0 +1,18 @@
+.iniciarsesionpagecontainer {
+    height: 60dvh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #36B6FF;
+    color: #09092b;
+    border-radius: 16px;
+}
+
+.iniciarsesionpagecontainer>h2 {
+    font-size: 38px;
+}

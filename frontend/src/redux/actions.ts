@@ -1,4 +1,3 @@
-// Definimos las acciones
 export const INICIO_EXITOSO = "LOGIN_SUCCESS";
 export const INICIO_FALLIDO = "LOGIN_FAILURE";
 export const CERRAR_SESION = "LOGOUT";
