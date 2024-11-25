@@ -12,6 +12,9 @@ export const InicioFallido = (error: string) => ({
   payload: error,
 });
 
-export const CerrarSesion = () => ({
-  type: CERRAR_SESION,
-});
+export const CerrarSesion = () => {
+  localStorage.removeItem("token");
+  return {
+      type: CERRAR_SESION,
+  };
+};

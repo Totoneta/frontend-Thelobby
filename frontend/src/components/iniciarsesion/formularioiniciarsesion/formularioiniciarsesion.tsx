@@ -41,7 +41,7 @@ export const FormularioIniciarSesion: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleLogin} className='formularioiniciarcontainer'>
+        <form name='formularioiniciarsesion' onSubmit={handleLogin} className='formularioiniciarcontainer'>
             <div className='formularioiniciarusername'>
                 <label htmlFor='usernameinput' >Usuario</label>
                 <input

@@ -37,5 +37,4 @@ export default function CallUserData() {
     calluserdata()
   }, [])
 
-  console.log(data);
 }

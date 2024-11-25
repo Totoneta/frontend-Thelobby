@@ -46,7 +46,7 @@ export default function FormularioRegistrarse() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="formularioregistrarsecontainer">
+        <form name='formularioregistrarse' onSubmit={handleSubmit} className="formularioregistrarsecontainer">
             <div className="formularioregistrarseusername">
                 <label htmlFor="usernameregistrarse">Username</label>
                 <input

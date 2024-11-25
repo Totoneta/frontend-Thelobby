@@ -1,9 +1,16 @@
 import { useState } from 'react'
 import './navbar.css'
 import { Link } from 'react-router-dom'
+import { AppDispatch, RootState } from '../../redux/store'
+import { CerrarSesion } from '../../redux/actions'
+import { useDispatch, useSelector } from 'react-redux'
 
 export default function NavBar() {
     const [index, setIndex] = useState(true)
+
+    const autenticado = useSelector((state: RootState) => state.auth.autenticado);
+    const dispatch = useDispatch<AppDispatch>();
+  
 
     const ShowHideLupa = () => {
         if (!index) {
@@ -60,10 +67,26 @@ export default function NavBar() {
                         <p>Comunidad</p>
                     </Link>
 
-                    <Link to='/iniciarsesion' className="item-navbar-r btn-ingresar">
-                        <img src="svg/navbar/user.svg" alt="Perfil" />
-                        <p>Ingresar</p>
-                    </Link>
+                    {
+                        autenticado === false ?
+                            <Link to='/iniciarsesion' className="item-navbar-r btn-ingresar">
+                                <img src="svg/navbar/user.svg" alt="Perfil" />
+                                <p>Ingresar</p>
+                            </Link>
+                            :
+                            <Link to='/perfil' className="item-navbar-r btn-ingresar">
+                                <img src="svg/navbar/user.svg" alt="Perfil" />
+                                <p>Perfil</p>
+                            </Link>
+                    }
+                    {
+                        autenticado === true ?
+                            <Link to='#' onClick={() => dispatch(CerrarSesion())} className="item-navbar-r btn-ingresar">
+                                <p>Cerrar Sesion</p>
+                            </Link>
+                            :
+                            <></>
+                    }
                 </li>
             </ul>
         </nav>
