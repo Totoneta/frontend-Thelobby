@@ -4,7 +4,7 @@
     align-items: center;
     gap: 1rem;
     margin: 0 auto;
-    width: 20rem;
+    width: 50%;
     flex-direction: column;
     padding: 1rem;
 }
@@ -26,17 +26,23 @@
     padding: .3rem;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #000;
+    border: 3px solid #36B6FF;
 }
 
 /* Botón Envíar */
 .formularioiniciarcontainer>button {
-    padding: .5rem .8rem;
+    padding: .5rem 2rem;
     cursor: pointer;
-    background-color: #fff;
-    color: #000;
+    margin: 1rem 0;
+    background-color: #09092b;
+    color: #09092b;
+    border: 2px solid #36B6FF;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
 }
 
 .formularioiniciarcontainer>button:hover {
-    background-color: #c7c7c7;
+    background-color: #36b5ff83;
+    border: 2px solid #36B6FF;
 }
