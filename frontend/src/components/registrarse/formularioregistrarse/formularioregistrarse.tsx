@@ -27,7 +27,7 @@ export default function FormularioRegistrarse() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8000/registrarse/", {
+            const response = await fetch("http://localhost:8000/sesion/registrarse/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -36,7 +36,8 @@ export default function FormularioRegistrarse() {
             });
             const data = await response.json();
             if (response.ok) {
-                navigate("/iniciarsesion");
+                alert('REGISTRO EXITOSO!')
+                navigate('/iniciarsesion')
             } else {
                 alert(data.error);
             }

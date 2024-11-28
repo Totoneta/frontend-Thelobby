@@ -26,6 +26,7 @@
     padding: .3rem;
     outline: none;
     border-radius: 5px;
+    border: 1px solid #000;
 }
 
 /* Botón Envíar */

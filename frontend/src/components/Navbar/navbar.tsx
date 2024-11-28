@@ -1,70 +1,50 @@
 import { useState } from 'react'
 import './navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AppDispatch, RootState } from '../../redux/store'
 import { CerrarSesion } from '../../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function NavBar() {
-    const [index, setIndex] = useState(true)
+
+    const navigate = useNavigate()
 
     const autenticado = useSelector((state: RootState) => state.auth.autenticado);
     const dispatch = useDispatch<AppDispatch>();
-  
 
-    const ShowHideLupa = () => {
-        if (!index) {
-            setIndex(true)
-        } else {
-            setIndex(false)
-        }
-    }
 
     return (
         <nav className="navbar-container">
             <ul className="list-navbar">
 
                 <li className="navbar-left-container">
-                    <Link to='' className="item-navbar-r btns btn-menu"><img src="svg/navbar/menu.svg" alt=" /" /></Link>
                     <Link to='/' className="item-navbar-l"><img src="" alt="" />Logo</Link>
                 </li>
 
                 <li className="navbar-right-container">
 
-                    <div className="lupa">
-                        {index ? <input type="text" className="input-buscar nshow" /> : <input type="text" className="input-buscar" />}
-                        <Link to='' className="item-navbar-r btns-lupa" onClick={ShowHideLupa}>
-                            <img src="svg/navbar/lupa.svg" id="lupita" alt="Lupa" />
-                        </Link>
-                    </div>
-
-                    <Link to='/juegos' className="item-navbar-r btns">
-                        <img src="svg/navbar/dado.svg" alt="Juegos" />
-                        <p>Juegos</p>
+                    <Link to='/' className="item-navbar-r btns">
+                        <img src="svg/navbar/home.svg" alt="Inicio" />
+                        <p>Inicio</p>
                     </Link>
-                    <Link to='/competiciones' className="item-navbar-r btns">
-                        <img src="svg/navbar/trofeo.svg" alt="Competiciones" />
-                        <p>Competiciones</p>
+                    <Link to='/partidas' className="item-navbar-r btns">
+                        <img src="svg/navbar/trofeo.svg" alt="Partidas" />
+                        <p>Partidas</p>
                     </Link>
 
-                    <Link to='/equipos' className="item-navbar-r btns">
-                        <img src="svg/navbar/team.svg" alt="Equipos" />
-                        <p>Equipos</p>
+                    <Link to='/foros' className="item-navbar-r btns">
+                        <img src="svg/navbar/comunidad.svg" alt="Foros" />
+                        <p>Foros</p>
+                    </Link>
+                    
+                    <Link to='/amigos' className="item-navbar-r btns">
+                        <img src="svg/navbar/friends.svg" alt="Amigos" />
+                        <p>Amigos</p>
                     </Link>
 
-                    <Link to='/eventos' className="item-navbar-r btns">
-                        <img src="svg/navbar/streaming.svg" alt="Eventos" />
-                        <p>Eventos</p>
-                    </Link>
-
-                    <Link to='/apuestas' className="item-navbar-r btns">
-                        <img src="svg/navbar/apostar.svg" alt="Apuestas" />
-                        <p>Apuestas</p>
-                    </Link>
-
-                    <Link to='/comunidad' className="item-navbar-r btns">
-                        <img src="svg/navbar/comunidad.svg" alt="Comunidad" />
-                        <p>Comunidad</p>
+                    <Link to='/favoritos' className="item-navbar-r btns">
+                        <img src="svg/navbar/fav.svg" alt="Favoritos" />
+                        <p>Favoritos</p>
                     </Link>
 
                     {
@@ -81,7 +61,10 @@ export default function NavBar() {
                     }
                     {
                         autenticado === true ?
-                            <Link to='#' onClick={() => dispatch(CerrarSesion())} className="item-navbar-r btn-ingresar">
+                            <Link to='#' onClick={() => {
+                                dispatch(CerrarSesion())
+                                setTimeout(() => navigate("/"), 300);
+                            }} className="item-navbar-r btn-ingresar">
                                 <p>Cerrar Sesion</p>
                             </Link>
                             :

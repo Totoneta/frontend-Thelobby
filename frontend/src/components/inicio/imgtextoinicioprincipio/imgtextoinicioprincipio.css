@@ -1,0 +1,30 @@
+.imgtextoinicioprincipiocontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.5rem;
+    height: 80dvh;
+    width: 100%;
+    background-image: url('./img/imgtextoinicioprincipio.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.imgtextoinicioprincipiocontainer>h3 {
+    font-size: 100px;
+    width: 100%;
+    text-shadow: 0px 0px 4px #09092b;
+    color: #36B6FF;
+}
+
+.imgtextoinicioprincipiocontainer>span {
+    font-size: 25px;
+    width: 60%;
+    background-color: #36b5ff98;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}

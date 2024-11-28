@@ -30,7 +30,7 @@ export const FormularioIniciarSesion: React.FC = () => {
             if (response.ok) {
                 dispatch(InicioExitoso(result.access));
                 localStorage.setItem('token', result.access);
-                navigate('/');
+                navigate('/perfil');
             } else {
                 dispatch(InicioFallido(result.error));
             }

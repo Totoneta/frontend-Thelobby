@@ -79,38 +79,3 @@
     height: 2rem;
     width: 2rem;
 }
-
-/* Lupa */
-.lupa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: .3rem;
-}
-
-.input-buscar {
-    width: 14rem;
-    height: 2.3rem;
-    padding: .5rem ;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid #36B6FF;
-    border-right: none;
-    transition: all .8s;
-}
-
-.btns-lupa{
-    border-radius: 10px;
-    width: 3rem;
-    height: 2.3rem;
-    padding: .5rem;
-    cursor: pointer;
-    border: 1px solid #36B6FF;
-}
-
-/* Mostrar u Ocultar */
-.nshow {
-    opacity: 0;
-    width: 0;
-}

@@ -1,0 +1,126 @@
+/* Info principal user */
+.infoprincipalperfilcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    background-color: #09092B;
+    color: #36B6FF;
+}
+
+.infoprincipalperfiluserinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 12rem;
+    width: 35rem;
+    padding-right: 4rem;
+}
+
+.infoprincipalperfiluserinfotexto {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: max-content;
+    gap: .5rem;
+    padding: 1rem;
+    height: 100%;
+}
+
+.imgpaisperfilcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.imgpaisperfilcontainer>img {
+    height: 1.5rem;
+}
+
+/* Imagen user */
+.img-user-perfil {
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 3px solid #ffffff;
+}
+
+/* Button Envíar Solicitud */
+.infoprincipalperfilbtninteractuar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 8rem;
+}
+
+.infoprincipalperfilbtninteractuar>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    gap: .2rem;
+    text-align: center;
+    background-color: #36B6FF;
+    border-radius: 6px;
+    color: #000;
+    text-decoration: none;
+    padding: .2rem .5rem .2rem .2rem;
+    border: 3px solid #36B6FF;
+    transition: all .3s;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.infoprincipalperfilbtninteractuar>a>img {
+    height: 1.7rem;
+    padding: .3rem;
+}
+
+
+.infoprincipalperfilbtninteractuar>a:hover {
+    background-color: #4FFDFF;
+}
+
+/* Redes */
+.redes-personales-perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    height: 8rem;
+}
+
+.red-personal-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    gap: .2rem;
+    text-align: center;
+    background-color: #36B6FF;
+    border-radius: 6px;
+    color: #000;
+    text-decoration: none;
+    padding: .1rem .5rem .1rem .2rem;
+    border: 3px solid #36B6FF;
+    transition: all .3s;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.red-personal-perfil:hover {
+    background-color: #4FFDFF;
+}
+
+.red-personal-perfil>img {
+    height: 1.5rem;
+    padding: .3rem;
+}

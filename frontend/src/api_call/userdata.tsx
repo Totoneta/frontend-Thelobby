@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
-const USERDATA_APIURL = "http://127.0.0.1:8000/api/Usuarios";
+let userid
+
+const USERDATA_APIURL = `http://127.0.0.1:8000/api/Usuarios/${userid}`;
 
 interface UsuarioData {
   nombre: string;

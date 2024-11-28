@@ -15,12 +15,10 @@ export default function Rutas() {
             <Routes>
                 {/* Rutas Página */}
                 <Route path="/" element={<InicioPage />} />
-                <Route path="/juegos" element={<InicioPage />} />
-                <Route path="/competiciones" element={<InicioPage />} />
-                <Route path="/equipos" element={<InicioPage />} />
-                <Route path="/eventos" element={<InicioPage />} />
-                <Route path="/apuestas" element={<InicioPage />} />
-                <Route path="/comunidad" element={<InicioPage />} />
+                <Route path="/partidas" element={<InicioPage />} />
+                <Route path="/amigos" element={<InicioPage />} />
+                <Route path="/foros" element={<InicioPage />} />
+                <Route path="/favoritos" element={<InicioPage />} />
 
                 {/* Rutas Usuario */}
                 <Route path="/perfil" element={<PerfilPage />} />
