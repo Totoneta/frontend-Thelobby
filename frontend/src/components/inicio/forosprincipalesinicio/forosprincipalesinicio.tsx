@@ -1,24 +1,53 @@
 import './forosprincipalesinicio.css'
+import ForosPrincipalesInicioTarjeta from './forosprincipalesiniciotarjeta/forosprincipalesiniciotarjeta'
 
 export default function ForosPrincipalesInicio() {
 
+    const forosPrincipales = [
+        {
+            id: 1,
+            titulo: 'RocketForum',
+            descripcion: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio atque ea id. Pariatur, aliquam? Ea en',
+            imgpath: './img/tarjetaforoinicio1.jpg'
+        },
+        {
+            id: 2,
+            titulo: 'Legue of Manks',
+            descripcion: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio atque ea id. Pariatur, aliquam? Ea en',
+            imgpath: './img/tarjetaforoinicio2.jpg'
+        },
+        {
+            id: 3,
+            titulo: 'Valorantting',
+            descripcion: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio atque ea id. Pariatur, aliquam? Ea en',
+            imgpath: './img/tarjetaforoinicio2.jpg'
+        },
+        {
+            id: 4,
+            titulo: 'Arcoiris6',
+            descripcion: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio atque ea id. Pariatur, aliquam? Ea en',
+            imgpath: './img/tarjetaforoinicio1.jpg'
+        },
+    ]
 
-    return(
-        <aside className="forosprincipalesiniciocontainer">
-            <div className="forosprincipalesinicioindividual">
-                <img src="./img/tarjetaforoinicio1.jpg" alt="" />
-                <div className="forosprincipalesinicioindividualtexto">
-                    <h4>FORO MARIO CREATIVO</h4>
-                    <p>Charlemos de Mario y lo mejor de el! Tu opina libremente.</p>
-                </div>
+    return (
+        <div className="forosprincipalesiniciocontainer">
+            <div className="forosprincipalesiniciotextocontainer">
+                <h3>¿VISITA LOS FOROS MÁS CONCURRIDOS DEL MES!</h3>
+                <span>Los foros se actualizan los 1 de cada mes. Puedes acceder a más foros dirigiendoté a el apartado foros en la barra superior de navegación.</span>
             </div>
-            <div className="forosprincipalesinicioindividual">
-                <img src="./img/tarjetaforoinicio2.jpg" alt="" />
-                <div className="forosprincipalesinicioindividualtexto">
-                    <h4>ROCKET PROS TEAMS</h4>
-                    <p>Estamos buscando personas de rango GranChampion para arriba que quieran competir </p>
-                </div>
-            </div>
-        </aside>
+
+            <aside className="forosprincipalesiniciotarjetascontainer">
+                {
+
+                    forosPrincipales.map((e) => {
+                        return (
+                            <ForosPrincipalesInicioTarjeta key={e.id} titulo={e.titulo} descripcion={e.descripcion} imgpath={e.imgpath} />
+                        )
+                    })
+
+                }
+            </aside>
+        </div>
     )
 }

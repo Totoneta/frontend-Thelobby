@@ -1,0 +1,41 @@
+.forosprincipalesinicioindividual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 16px;
+    border: 3px solid #36B6FF;
+    transition: all .3s;
+    background-color: #09092b;
+    cursor: pointer;
+    color: #36B6FF;
+}
+
+.forosprincipalesinicioindividual:hover {
+    scale: 105%;
+}
+
+.forosprincipalesinicioindividual> img {
+    height: 12rem;
+    border-radius: 10px;
+    max-width: 50%;
+}
+
+.forosprincipalesinicioindividualtexto {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: left;
+}
+
+.forosprincipalesinicioindividualtexto > h4 {
+    font-size: 22px;
+}
+.forosprincipalesinicioindividualtexto > p {
+    font-size: 18px;
+
+}
