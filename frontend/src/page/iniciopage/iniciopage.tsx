@@ -1,11 +1,9 @@
-import ForosPrincipalesInicio from "../../components/inicio/forosprincipalesinicio/forosprincipalesinicio";
-import ImgTextoInicioPrincipio from "../../components/inicio/imgtextoinicioprincipio/imgtextoinicioprincipio";
+import { CarruselConSelector } from "../../components/carruselconselector/carruselconselector";
 
 export default function InicioPage() {
     return(
         <>
-        <ImgTextoInicioPrincipio />
-        <ForosPrincipalesInicio />
+        <CarruselConSelector />
         </>
     )
 }

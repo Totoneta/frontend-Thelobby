@@ -1,4 +1,4 @@
-import InfoPrincipalPerfil from "../../components/perfil/infoprincipalperfil/infoprincipalperfil";
+import InfoPrincipalPerfil from "../../components/infoprincipalperfil/infoprincipalperfil";
 
 export default function PerfilPage() {
     return(

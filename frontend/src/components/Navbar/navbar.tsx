@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { AppDispatch, RootState } from '../../redux/store'
@@ -24,27 +23,23 @@ export default function NavBar() {
                 <li className="navbar-right-container">
 
                     <Link to='/' className="item-navbar-r btns">
-                        <img src="svg/navbar/home.svg" alt="Inicio" />
+                        <img src="/svg/navbar/home.svg" alt="Inicio" />
                         <p>Inicio</p>
                     </Link>
+                    
+                    <Link to='/foros' className="item-navbar-r btns">
+                        <img src="/svg/navbar/comunidad.svg" alt="Blog" />
+                        <p>Blog</p>
+                    </Link>
+
                     <Link to='/partidas' className="item-navbar-r btns">
-                        <img src="svg/navbar/trofeo.svg" alt="Partidas" />
+                        <img src="/svg/navbar/trofeo.svg" alt="Partidas" />
                         <p>Partidas</p>
                     </Link>
 
-                    <Link to='/foros' className="item-navbar-r btns">
-                        <img src="svg/navbar/comunidad.svg" alt="Foros" />
-                        <p>Foros</p>
-                    </Link>
-                    
                     <Link to='/amigos' className="item-navbar-r btns">
-                        <img src="svg/navbar/friends.svg" alt="Amigos" />
+                        <img src="/svg/navbar/friends.svg" alt="Amigos" />
                         <p>Amigos</p>
-                    </Link>
-
-                    <Link to='/favoritos' className="item-navbar-r btns">
-                        <img src="svg/navbar/fav.svg" alt="Favoritos" />
-                        <p>Favoritos</p>
                     </Link>
 
                     {

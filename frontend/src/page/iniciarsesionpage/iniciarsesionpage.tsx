@@ -1,5 +1,5 @@
-import { FormularioIniciarSesion } from '../../components/iniciarsesion/formularioiniciarsesion/formularioiniciarsesion';
-import NoTengoCuenta from '../../components/iniciarsesion/notegndocuenta/notengocuenta';
+import { FormularioIniciarSesion } from '../../components/formularioiniciarsesion/formularioiniciarsesion';
+import NoTengoCuenta from '../../components/notengdocuenta/notengocuenta';
 import './iniciarsesionpage.css'
 
 export const IniciarSesionPage: React.FC = () => {

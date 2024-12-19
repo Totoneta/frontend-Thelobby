@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { InicioExitoso, InicioFallido } from '../../../redux/actions';
-import { AppDispatch } from '../../../redux/store';
+import { InicioExitoso, InicioFallido } from '../../redux/actions';
+import { AppDispatch } from '../../redux/store';
 import { useNavigate } from 'react-router-dom';
 import './formularioiniciarsesion.css'
 

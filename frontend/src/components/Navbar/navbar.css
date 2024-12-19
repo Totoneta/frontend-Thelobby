@@ -5,7 +5,7 @@
 
 .list-navbar {
     list-style: none;
-    background-color: #09092B;
+    background-color: #0E212A;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@
 /* Items derecha */
 .navbar-right-container {
     display: flex;
-    gap: .3rem;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
     width: max-content;
@@ -34,48 +34,111 @@
 .item-navbar-l,
 .item-navbar-r {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #ffffff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 17px;
+    gap: .3rem;
     font-weight: bold;
     cursor: pointer;
     text-align: center;
+    transition: all .3s;
+    border-bottom: 1px solid transparent;
 }
 
-.item-navbar-r:hover{
-    background-color: #36b5ff53;
+.item-navbar-r:hover {
+    border-bottom: 1px solid #75d569;
+    color: #75d569;
 }
 
 .item-navbar-r>img {
-    height: 1.5rem;
+    height: 0;
 }
 
 
 /* Estilos personalizados */
-.btns{
-    border-radius: 10px;
-    height: 3rem;
-    width: 6rem;
-    padding: .1rem;
+.btns {
+    padding: .3rem .6rem;
     cursor: pointer;
 }
 
 .btn-ingresar {
     border-radius: 10px;
     height: 3rem;
-    width: 7rem;
+    width: 9rem;
+    font-size: 19px;
     padding: .1rem .2rem;
     cursor: pointer;
     flex-direction: row;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    border: 2px solid #36B6FF;
-    color: #36B6FF;
+    border: 2px solid #75d569;
+    color: #75d569;
 }
 
-.btn-menu>img{
+.btn-ingresar:hover {
+    background-color: #75d5697f;
+}
+
+.btn-ingresar>img {
+    height: 1.5rem;
+}
+
+.btn-menu>img {
     height: 2rem;
     width: 2rem;
+}
+
+
+/* Mediaqueryes 350px a 720px */
+@media (min-width: 350px) and (max-width: 720px) {
+
+    /* Container  */
+    .list-navbar {
+        padding: 0 1rem;
+    }
+
+    /* Items izquierda */
+    .navbar-left-container {
+        display: none;
+        pointer-events: none;
+    }
+
+    .navbar-right-container {
+        width: 100%;
+    }
+
+    /* Opciones del navbar */
+    .item-navbar-r {
+        justify-content: space-between;
+        font-size: 0px;
+        gap: 0;
+    }
+
+    .item-navbar-r>img {
+        height: 1.5rem;
+    }
+
+
+    /* Estilos personalizados */
+    .btns {
+        padding: .3rem 0;
+    }
+
+    .btn-ingresar {
+        width: 6rem;
+        font-size: 16px;
+        gap: .2rem;
+    }
+
+    .btn-ingresar>img {
+        height: 1.2rem;
+    }
+
+    .btn-menu>img {
+        height: 2rem;
+        width: 2rem;
+    }
 }

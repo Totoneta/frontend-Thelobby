@@ -1,18 +1,15 @@
 .registrarsepagecontainer {
-    height: 80dvh;
-    width: 60%;
+    height: 92dvh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #09092b;
-    color: #36B6FF;
-    border-radius: 16px;
+    background-color: #0E212A;
+    color: #75d569;
 }
 
 .registrarsepagecontainer>h2 {
-    font-size: 38px;
+    font-size: 50px;
 }

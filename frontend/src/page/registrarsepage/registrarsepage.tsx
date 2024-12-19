@@ -1,5 +1,5 @@
-import FormularioRegistrarse from '../../components/registrarse/formularioregistrarse/formularioregistrarse';
-import YaTengoUnaCuenta from '../../components/registrarse/yatengocuenta/yatengocuenta';
+import FormularioRegistrarse from '../../components/formularioregistrarse/formularioregistrarse';
+import YaTengoUnaCuenta from '../../components/yatengocuenta/yatengocuenta';
 import './registrarsepage.css'
 
 export default function RegistrarsePage() {

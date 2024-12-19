@@ -27,7 +27,7 @@
     padding: .3rem;
     outline: none;
     border-radius: 5px;
-    border: 3px solid #36B6FF;
+    border: 3px solid #75d569;
 }
 
 /* Botón Envíar */
@@ -35,9 +35,9 @@
     padding: .5rem 2rem;
     cursor: pointer;
     margin: 1rem 0;
-    background-color: #09092b;
-    color: #09092b;
-    border: 2px solid #36B6FF;
+    background-color: #0E212A;
+    color: #0E212A;
+    border: 2px solid #75d569;
     border-radius: 5px;
     color: #fff;
     font-size: 15px;
@@ -45,5 +45,5 @@
 
 .formularioregistrarsecontainer>button:hover {
     background-color: #36b5ff83;
-    border: 2px solid #36B6FF;
+    border: 2px solid #75d569;
 }

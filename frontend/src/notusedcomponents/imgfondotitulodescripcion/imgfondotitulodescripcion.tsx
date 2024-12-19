@@ -1,6 +1,6 @@
-import './imgtextoinicioprincipio.css'
+import './imgfondotitulodescripcion.css'
 
-export default function ImgTextoInicioPrincipio() {
+export default function ImgFondoTituloDescripcion() {
 
     return(
         <section className="imgtextoinicioprincipiocontainer">
