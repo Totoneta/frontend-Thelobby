@@ -19,6 +19,8 @@
     width: 100%;
 }
 
+/*-------------------------------------------------------*/
+
 /* Inputs */
 .formularioregistrarseusername>input,
 .formularioregistrarsepassword>input,
@@ -29,6 +31,8 @@
     border-radius: 5px;
     border: 3px solid #75d569;
 }
+
+/*-------------------------------------------------------*/
 
 /* Botón Envíar */
 .formularioregistrarsecontainer>button {
@@ -46,4 +50,31 @@
 .formularioregistrarsecontainer>button:hover {
     background-color: #36b5ff83;
     border: 2px solid #75d569;
+}
+
+/*-------------------------------------------------------*/
+
+/* Mediaquerys 350px a 720px */
+@media (min-width: 350px) and (max-width: 720px) {
+    .formularioregistrarsecontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 auto;
+        width: 80%;
+        flex-direction: column;
+    }
+    
+    .formularioregistrarseusername,
+    .formularioregistrarsepassword,
+    .formularioregistrarseemail {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-direction: column;
+        gap: .5rem;
+        width: 100%;
+    }
+
 }

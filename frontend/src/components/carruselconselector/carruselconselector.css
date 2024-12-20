@@ -5,6 +5,8 @@
     position: relative;
 }
 
+/*-------------------------------------------------------*/
+
 /* Selectores */
 .carruselconselectorcontainerselector {
     position: absolute;
@@ -29,6 +31,8 @@
     background-color: #FFF;
 }
 
+/*-------------------------------------------------------*/
+
 /* Contenedos de imagenes */
 .carruselconselectorcontainerimgs {
     display: flex;
@@ -51,7 +55,7 @@
 }
 
 .carruselconselectorimagenesytexto.visible {
-    display: flex; 
+    display: flex;
     justify-content: end;
     align-items: center;
     gap: 1rem;
@@ -63,6 +67,8 @@
     opacity: 0;
 }
 
+/*-------------------------------------------------------*/
+
 /* Texto */
 .carruselconselectorimagenesytexto>h3 {
     font-size: 60px;
@@ -70,9 +76,55 @@
     background-color: #000000bc;
     padding: 1rem;
 }
+
 .carruselconselectorimagenesytexto>span {
     font-size: 25px;
     color: #75d569;
     background-color: #000000bc;
     padding: 1rem;
+}
+
+/*-------------------------------------------------------*/
+
+/* Mediaquerys 350px a 720px */
+@media (min-width: 350px) and (max-width: 720px) {
+    .carruselconselectorcontainer {
+        height: 85dvh;
+    }
+
+    /* Selectores */
+    .carruselconselectorcontainerselector {
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .selectorcarrusel {
+        border: 3px solid #0E212A;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    /* Contenedos de imagenes */
+    .carruselconselectorimagenesytexto {
+        height: 85dvh;
+    }
+
+    .carruselconselectorimagenesytexto.visible {
+        justify-content: center;
+    }
+
+    .carruselconselectorimagenesytexto.hidden {
+        opacity: 0;
+    }
+
+    /* Texto */
+    .carruselconselectorimagenesytexto>h3 {
+        font-size: 30px;
+        padding: .5rem .3rem;
+    }
+
+    .carruselconselectorimagenesytexto>span {
+        font-size: 20px;
+        padding: .5rem .3rem;
+    }
 }

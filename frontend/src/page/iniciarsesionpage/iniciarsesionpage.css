@@ -13,3 +13,13 @@
 .iniciarsesionpagecontainer>h2 {
     font-size: 50px;
 }
+
+
+/*-------------------------------------------------------*/
+
+/* Mediaquerys 350px a 720px */
+@media (min-width: 350px) and (max-width: 720px) {
+    .iniciarsesionpagecontainer>h2 {
+        font-size: 30px;
+    }
+}
