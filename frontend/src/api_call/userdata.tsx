@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 
 let userid
 
@@ -39,4 +39,4 @@ export default function CallUserData() {
     calluserdata()
   }, [])
 
-}
+}*/
