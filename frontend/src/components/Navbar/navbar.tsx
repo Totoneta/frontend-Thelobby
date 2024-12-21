@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 export default function NavBar() {
 
+    
     const navigate = useNavigate()
 
     const autenticado = useSelector((state: RootState) => state.auth.autenticado);
