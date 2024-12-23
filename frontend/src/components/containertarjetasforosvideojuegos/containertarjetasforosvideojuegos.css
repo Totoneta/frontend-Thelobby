@@ -113,8 +113,9 @@
 
     /* Tarjetas Triples */
     .tajetatripleforoscontainer {
-        grid-template-columns: 6rem 6rem 6rem;
+        grid-template-columns: 7rem 7rem 7rem;
         flex-direction: column;
+        padding: 0;
     }
 
     .tajetatripleforoscontainer>a>img {

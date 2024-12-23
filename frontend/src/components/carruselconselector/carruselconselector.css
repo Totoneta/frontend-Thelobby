@@ -89,7 +89,7 @@
 /* Mediaquerys 350px a 720px */
 @media (min-width: 350px) and (max-width: 720px) {
     .carruselconselectorcontainer {
-        height: 85dvh;
+        height: 85vh;
     }
 
     /* Selectores */
