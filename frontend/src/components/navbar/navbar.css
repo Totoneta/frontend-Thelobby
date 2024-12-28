@@ -21,6 +21,10 @@
     width: 10rem;
 }
 
+.navbar-left-container>a>img {
+    height: 3rem;
+}
+
 /* Items derecha */
 .navbar-right-container {
     display: flex;

@@ -18,7 +18,7 @@ export default function NavBar() {
             <ul className="list-navbar">
 
                 <li className="navbar-left-container">
-                    <Link to='/' className="item-navbar-l"><img src="" alt="" />Logo</Link>
+                    <Link to='/' className="item-navbar-l"><img src="/img/the-lobby-logo.png" alt="" /></Link>
                 </li>
 
                 <li className="navbar-right-container">
