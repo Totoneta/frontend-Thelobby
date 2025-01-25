@@ -1,0 +1,102 @@
+/* Info principal user */
+.infoprincipalperfilcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    height: 25rem;
+    padding: 5rem 2rem 2rem 2rem;
+    margin: 0 auto;
+    background-color: #0E212A;
+    color: #75d569;
+}
+
+/* Img user, pais, username, nombre */
+.infoprincipalperfiluserinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 15rem;
+    width: 35rem;
+    padding-right: 4rem;
+}
+
+.infoprincipalperfiluserinfotexto {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: max-content;
+    gap: 1rem;
+    padding: 3rem 1rem 1rem 1rem ;
+    height: 100%;
+}
+
+.infoprincipalperfiluserinfotexto>h2 {
+    font-size: 35px;
+}
+
+/* Contenedor texto pais y nombre */
+.textoperfilusercontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Pais */
+.imgpaisperfilcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.imgpaisperfilcontainer>img {
+    height: 1.5rem;
+}
+
+/* Imagen user */
+.img-user-perfil {
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 3px solid #75d569;
+    overflow: hidden;
+}
+
+/* Button Envíar Solicitud */
+.infoprincipalperfilbtninteractuar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    height: 100%;
+    gap: .3rem;
+}
+
+.infoprincipalperfilbtninteractuar>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11rem;
+    height: 2.1rem;
+    text-align: center;
+    background-color: #75d569;
+    border-radius: 6px;
+    color: #0E212A;
+    text-decoration: none;
+    padding: .5rem;
+    border: 3px solid #75d569;
+    transition: all .3s;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.infoprincipalperfilbtninteractuar>a:hover {
+    background-color: #75d5697f;
+}
+

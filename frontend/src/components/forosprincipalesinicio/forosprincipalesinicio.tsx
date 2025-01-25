@@ -28,6 +28,18 @@ export default function ForosPrincipalesInicio() {
             descripcion: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio atque ea id. Pariatur, aliquam? Ea en',
             imgpath: './img/tarjetaforoinicio1.jpg'
         },
+        {
+            id: 5,
+            titulo: 'Arcoiris6',
+            descripcion: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio atque ea id. Pariatur, aliquam? Ea en',
+            imgpath: './img/tarjetaforoinicio1.jpg'
+        },
+        {
+            id: 6,
+            titulo: 'Arcoiris6',
+            descripcion: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio atque ea id. Pariatur, aliquam? Ea en',
+            imgpath: './img/tarjetaforoinicio1.jpg'
+        },
     ]
 
     return (

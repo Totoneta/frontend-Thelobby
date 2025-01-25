@@ -4,11 +4,19 @@
     align-items: center;
     gap: 1rem;
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
     flex-direction: column;
+    padding: 2rem;
+    border: 3px solid #75d569;
+}
+
+.formularioregistrarsecontainer>h2 {
+    font-size: 50px;
 }
 
 .formularioregistrarseusername,
+.formularioregistrarsenombre,
+.formularioregistrarsenacionalidad,
 .formularioregistrarsepassword,
 .formularioregistrarseemail {
     display: flex;
@@ -17,39 +25,67 @@
     flex-direction: column;
     gap: .5rem;
     width: 100%;
+    max-width: 25rem;
 }
 
 /*-------------------------------------------------------*/
 
 /* Inputs */
 .formularioregistrarseusername>input,
+.formularioregistrarsenombre>input,
+.formularioregistrarsenacionalidad>select,
 .formularioregistrarsepassword>input,
+.formularioregistrarsenacionalidad>select>option,
 .formularioregistrarseemail>input {
     width: 100%;
-    padding: .3rem;
+    padding: .5rem .8rem;
     outline: none;
-    border-radius: 5px;
+    border-radius: 24px;
     border: 3px solid #75d569;
+    background-color: #0E212A;
+    color: #75d569;
 }
+
 
 /*-------------------------------------------------------*/
 
 /* Botón Envíar */
 .formularioregistrarsecontainer>button {
-    padding: .5rem 2rem;
-    cursor: pointer;
     margin: 1rem 0;
-    background-color: #0E212A;
-    color: #0E212A;
     border: 2px solid #75d569;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 15px;
+    color: #75d569;
+    border-radius: 10px;
+    height: 3rem;
+    width: 9rem;
+    font-size: 19px;
+    font-weight: bold;
+    padding: .1rem .2rem;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 .formularioregistrarsecontainer>button:hover {
-    background-color: #36b5ff83;
+    background-color: #75d5697f;
     border: 2px solid #75d569;
+}
+
+/*-------------------------------------------------------*/
+
+.yatengounacuentacontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.yatengounacuentacontainer>a {
+    color: #75d5697f;
+    font-size: 18px;
+}
+
+.yatengounacuentacontainer>a:hover {
+    color: #75d569;
 }
 
 /*-------------------------------------------------------*/

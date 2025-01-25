@@ -1,9 +1,9 @@
-import InfoPrincipalPerfil from "../../components/infoprincipalperfil/infoprincipalperfil";
+import InfoPrincipalPerfilAuth from "../../components/infoprincipalperfilauth/infoprincipalperfilauth";
 
 export default function PerfilPage() {
     return(
         <>
-        <InfoPrincipalPerfil />
+        <InfoPrincipalPerfilAuth />
         </>
     )
 }

@@ -1,13 +1,21 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './formularioregistrarse.css'
 
 interface FormularioRegistrarse {
     username: string
+    nombre: string
+    nacionalidad: string
     email: string
     password: string
 }
 
+const opcionesNacionalidad = [
+    { value: 'AR', label: 'Argentina' },
+    { value: 'ES', label: 'España' },
+    { value: 'IT', label: 'Italia' },
+    { value: 'FR', label: 'Francia' },
+];
 
 export default function FormularioRegistrarse() {
 
@@ -15,6 +23,8 @@ export default function FormularioRegistrarse() {
 
     const [formData, setFormData] = useState<FormularioRegistrarse>({
         username: "",
+        nombre: "",
+        nacionalidad: "",
         email: "",
         password: "",
     });
@@ -48,14 +58,28 @@ export default function FormularioRegistrarse() {
 
     return (
         <form name='formularioregistrarse' onSubmit={handleSubmit} className="formularioregistrarsecontainer">
+            <h2>REGISTRARSE</h2>
+
             <div className="formularioregistrarseusername">
                 <label htmlFor="usernameregistrarse">Username</label>
                 <input
                     id="usernameregistrarse"
                     type="text"
                     name="username"
-                    placeholder="Usuario"
+                    placeholder="Username"
                     value={formData.username}
+                    onChange={handleChange}
+                    required
+                />
+            </div>
+            <div className="formularioregistrarsenombre">
+                <label htmlFor="nombreregistrarse">Nombre y apellido</label>
+                <input
+                    id="nombreregistrarse"
+                    type="text"
+                    name="nombre"
+                    placeholder="Nombre"
+                    value={formData.nombre}
                     onChange={handleChange}
                     required
                 />
@@ -72,6 +96,23 @@ export default function FormularioRegistrarse() {
                     required
                 />
             </div>
+            <div className="formularioregistrarsenacionalidad">
+            <label htmlFor="nacionalidadregistrarse">Nacionalidad</label>
+                <select
+                    name="nacionalidad"
+                    id="nacionalidadregistrarse"
+                    value={formData.nacionalidad}
+                    onChange={handleChange}
+                    required
+                >
+                    <option value="">Seleccione una opción</option>
+                    {opcionesNacionalidad.map((option) => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
+                </select>
+                </div>
             <div className="formularioregistrarsepassword">
                 <label htmlFor="passwordregistrarse">Contraseña</label>
                 <input
@@ -85,6 +126,11 @@ export default function FormularioRegistrarse() {
                 />
             </div>
             <button type="submit">Registrarse</button>
+
+
+            <div className="yatengounacuentacontainer">
+                <Link to='/iniciarsesion'>Ya tengo una cuenta</Link>
+            </div>
         </form>
     );
 };

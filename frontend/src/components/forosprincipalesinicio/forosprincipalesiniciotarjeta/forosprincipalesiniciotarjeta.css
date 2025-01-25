@@ -6,11 +6,10 @@
     width: 100%;
     padding: 1rem;
     border-radius: 16px;
-    border: 3px solid #36B6FF;
+    border: 3px solid #75d569;
     transition: all .3s;
-    background-color: #09092b;
+    background-color: transparent;
     cursor: pointer;
-    color: #36B6FF;
 }
 
 .forosprincipalesinicioindividual:hover {
@@ -33,9 +32,10 @@
 }
 
 .forosprincipalesinicioindividualtexto > h4 {
-    font-size: 22px;
+    font-size: 20px;
+    color: #75d569;
 }
 .forosprincipalesinicioindividualtexto > p {
-    font-size: 18px;
-
+    font-size: 16px;
+    color: #fff;
 }

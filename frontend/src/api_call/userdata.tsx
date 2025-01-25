@@ -1,42 +1,45 @@
-/*import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
-let userid
+/* Redux */
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "./../redux/store";
+import { setUsuario } from "./../redux/actions";
+import { UsuarioData } from "../redux/reducers";
 
-const USERDATA_APIURL = `http://127.0.0.1:8000/api/Usuarios/${userid}`;
 
-interface UsuarioData {
-  nombre: string;
-  apellido: string;
-  fechadenacimiento: string;
-  email: string;
-}
+const USERDATA_APIURL = `http://127.0.0.1:8000/api/perfil/`;
+
 
 export default function CallUserData() {
-
-  const [data, setData] = useState<UsuarioData[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string>('');
+  const dispatch = useDispatch();
+  const token = useSelector((state: RootState) => state.auth.token);
+  const usuario = useSelector((state: RootState) => state.auth.usuario);
 
   useEffect(() => {
-    const calluserdata = async () => {
+    if (usuario) return;
+
+    const fetchUserData = async () => {
       try {
-        const response = await fetch(USERDATA_APIURL);
-
-        if (!response.ok) {
-          throw new Error(`Estado: ${response.status}`)
-        }
-
-        const respuesta = await response.json();
-        setData(respuesta)
-
-      } catch (error: any) {
-        setError(`${error.message}`)
-      } finally {
-        setLoading(false)
+        const response = await axios.get(USERDATA_APIURL, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        
+        const usuarioinfo: UsuarioData = response.data;
+        
+        dispatch(setUsuario(usuarioinfo));
+      } catch (error) {
+        console.error("Error al obtener los datos del perfil", error);
       }
+    };
+    console.log(usuario);
+    
+    if (token) {
+      fetchUserData();
     }
+  }, [token, dispatch, usuario]);
 
-    calluserdata()
-  }, [])
-
-}*/
+  return null;
+}

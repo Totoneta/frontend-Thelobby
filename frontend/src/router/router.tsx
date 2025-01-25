@@ -9,6 +9,8 @@ import RegistrarsePage from "../page/registrarsepage/registrarsepage";
 import ForosPage from "../page/forospage/forospage";
 import AmigosPage from "../page/amigospage/amigospage";
 import PartidasPage from "../page/partidaspage/partidaspage";
+import EditarPerfil from "../page/editarperfil/editarperfil";
+import PerfilFriendPage from "../page/perfilfriendpage/perfilfirendpage";
 
 
 
@@ -23,10 +25,12 @@ export default function Rutas() {
                 <Route path="/" element={<InicioPage />} />
                 <Route path="/partidas" element={<PartidasPage />} />
                 <Route path="/amigos" element={<AmigosPage />} />
-                <Route path="/foros" element={<ForosPage />} />
+                <Route path="/blog" element={<ForosPage />} />
 
                 {/* Rutas Usuario */}
+                <Route path="/perfilamigo" element={<PerfilFriendPage />} />
                 <Route path="/perfil" element={<PerfilPage />} />
+                <Route path="/editarperfil" element={<EditarPerfil />} />
                 <Route path="/iniciarsesion" element={<IniciarSesionPage />} />
                 <Route path="/registrarse" element={<RegistrarsePage />} />
                 <Route path="/cerrarsesion" element={<></>} />

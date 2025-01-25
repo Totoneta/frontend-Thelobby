@@ -6,16 +6,14 @@ export const CarruselConSelector: React.FC = () => {
     interface ImgslideInterface {
         id: number
         imgpath: string
-        title: string
-        description: string
     }
 
     const imgsslide: ImgslideInterface[] = [
-        { id: 1, imgpath: "/img/imgtextoinicioprincipio.jpg", title: "IUJFSDUIFBSDAIUFB", description: "ainfbgdisjnf jfn dsjkf nskja fnsdajf nsdkj fnsdkj fnsdjkfn ksjanf kjsdnf jksnf kjsanf ljsdnf ljsdnfjkl n" },
-        { id: 2, imgpath: "/img/tarjetaforoinicio1.jpg", title: "ASDFSD ASDFDSFDS", description: "ainfbgdisjnf jfn dsjkf nskja fnsdajf nsdkj fnsdkj fnsdjkfn ksjanf kjsdnf jksnf kjsanf ljsdnf ljsdnfjkl n" },
-        { id: 3, imgpath: "/img/tarjetaforoinicio2.jpg", title: "SDAF  FADFSF A DFAS", description: "ainfbgdisjnf jfn dsjkf nskja fnsdajf nsdkj fnsdkj fnsdjkfn ksjanf kjsdnf jksnf kjsanf ljsdnf ljsdnfjkl n" },
-        { id: 4, imgpath: "/img/imgtextoinicioprincipio.jpg", title: "IUJFSDUIFBSDAIUFB", description: "ainfbgdisjnf jfn dsjkf nskja fnsdajf nsdkj fnsdkj fnsdjkfn ksjanf kjsdnf jksnf kjsanf ljsdnf ljsdnfjkl n" },
-        { id: 5, imgpath: "/img/tarjetaforoinicio1.jpg", title: "ASDFSD ASDFDSFDS", description: "ainfbgdisjnf jfn dsjkf nskja fnsdajf nsdkj fnsdkj fnsdjkfn ksjanf kjsdnf jksnf kjsanf ljsdnf ljsdnfjkl n" },
+        { id: 1, imgpath: "/img/imgtextoinicioprincipio.jpg"},
+        { id: 2, imgpath: "/img/tarjetaforoinicio1.jpg"},
+        { id: 3, imgpath: "/img/tarjetaforoinicio2.jpg" },
+        { id: 4, imgpath: "/img/imgtextoinicioprincipio.jpg"},
+        { id: 5, imgpath: "/img/tarjetaforoinicio1.jpg"},
     ];
 
     const [indexcarrusel, setIndexCarrusel] = useState(0)
@@ -46,8 +44,6 @@ export const CarruselConSelector: React.FC = () => {
                         className={`carruselconselectorimagenesytexto ${index === indexcarrusel ? 'visible' : 'hidden'}`}
                         style={{ backgroundImage: `url(${e.imgpath})` }}
                     >
-                        <h3>{e.title}</h3>
-                        <span>{e.description}</span>
                     </li>
                 ))}
             </ul>

@@ -23,6 +23,16 @@ export default function NavBar() {
 
                 <li className="navbar-right-container">
 
+                    <Link to='/perfilamigo' className="item-navbar-r btns">
+                        <img src="/svg/navbar/user.svg" alt="PerfilAmigo" />
+                        <p>PerfilAmigo</p>
+                    </Link>
+
+                    <Link to='/perfil' className="item-navbar-r btns">
+                        <img src="/svg/navbar/user.svg" alt="Perfil" />
+                        <p>Perfil</p>
+                    </Link>
+
                     <Link to='/' className="item-navbar-r btns">
                         <img src="/svg/navbar/home.svg" alt="Inicio" />
                         <p>Inicio</p>
@@ -46,7 +56,7 @@ export default function NavBar() {
                     {
                         autenticado === false ?
                             <Link to='/iniciarsesion' className="item-navbar-r btn-ingresar">
-                                <img src="svg/navbar/user.svg" alt="Perfil" />
+                                <img src="svg/navbar/user.svg" alt="Ingresar" />
                                 <p>Ingresar</p>
                             </Link>
                             :

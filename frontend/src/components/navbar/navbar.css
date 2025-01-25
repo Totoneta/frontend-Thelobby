@@ -1,6 +1,8 @@
 /* Container  */
 .navbar-container {
     width: 100%;
+    position: fixed;
+    z-index: 10;
 }
 
 .list-navbar {
@@ -84,6 +86,7 @@
 
 .btn-ingresar:hover {
     background-color: #75d5697f;
+    border: 2px solid #75d569;
 }
 
 .btn-ingresar>img {
