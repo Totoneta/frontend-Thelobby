@@ -20,7 +20,7 @@
 .navbarcontaineritemleft {
     display: flex;
     justify-content: space-between;
-    width: 10rem;
+    width: max-content;
 }
 
 .navbarcontaineritemleftlink>img {
@@ -44,6 +44,7 @@
     color: #fff;
     padding: .3rem .8rem;
     border-radius: 10px;
+    text-align: center;
 }
 
 .navbarcontaineritemcenterlink:hover {
@@ -163,5 +164,120 @@
     height: 1rem;
 }
 
+/*------------------------------------------------------------------------
+
 /* Mediaqueryes 350px a 720px */
-@media (min-width: 350px) and (max-width: 720px) {}
+@media (min-width: 350px) and (max-width: 720px) {
+
+    /* Container */
+    .navbarcontainerlist {
+        height: 6rem;
+        padding: 0 .5rem;
+    }
+
+    /*------------------------------------------------------------------------
+
+/* Items izquierda */
+    .navbarcontaineritemleftlink>img {
+        height: 1.5rem;
+    }
+
+    /*------------------------------------------------------------------------
+    
+    /* Items centro */
+    .navbarcontaineritemcenter {
+        gap: .5rem;
+        flex-direction: column;
+    }
+
+    .navbarcontaineritemcenterlink {
+        font-size: 12px;
+        padding: .3rem;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    /*------------------------------------------------------------------------
+
+    /* Items derecha */
+    /* Buscar */
+    .navbarcontaineritemright {
+        gap: .5rem;
+        flex-direction: column;
+    }
+
+    .navbarcontaineritemrightbuscar>input {
+        padding: .3rem;
+        width: 5rem;
+        height: 2rem;
+    }
+
+    .navbarcontaineritemrightbuscar>a>img {
+        height: 2rem;
+        padding: 0 .2rem;
+    }
+
+    .navbarcontaineritemrightbuscar>a>img:hover {
+        scale: 105%;
+    }
+
+    /* Social */
+    .navbarcontaineritemrightsocial {
+        position: relative;
+    }
+
+    .navbarcontaineritemrightsocialicon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .3rem;
+        cursor: pointer;
+    }
+
+    .navbarcontaineritemrightsocialicon>img {
+        height: 2rem;
+    }
+
+    /* Menú desplegable 
+    .navbarcontaineritemrightsocialmenudesplegablelist {
+        list-style: none;
+        position: absolute;
+        top: 4rem;
+        right: -2rem;
+        padding: 1rem;
+        background-color: #0E212A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 8rem;
+    }
+
+    .navbarcontaineritemrightsocialmenudesplegableitem>a {
+        color: #F4BA2D;
+        text-decoration: none;
+    }
+
+    .navbarcontaineritemrightsocialmenudesplegableitem>a:hover {
+        color: #c49622;
+        text-decoration: underline;
+    }
+*/
+
+    /* Usuario */
+    .navbarcontaineritemrightusuario {
+        gap: .3rem;
+        font-size: 18px;
+    }
+
+    .navbarcontaineritemrightusuario>img {
+        height: 2rem;
+    }
+
+    /* Flecha para ver más 
+    #arrowdownnavbar {
+        height: 1rem;
+    }
+    */
+}
