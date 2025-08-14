@@ -1,0 +1,98 @@
+.listasolicitudesamigoscontainer {
+    padding: 7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.listasolicitudesamigoscontainer>h3 {
+    font-size: 40px;
+}
+
+.listasolicitudesamigoscontainerlist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 1rem;
+    gap: 1rem;
+}
+
+.listasolicitudesamigoscontainerlistitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 15rem;
+    width: 40rem;
+    gap: 1rem;
+    background-color: #56bcb9;
+}
+
+.listasolicitudesamigoscontainerlistitem > img {
+    height: 13rem;
+    width: 10rem;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.listasolicitudesamigoscontainerlistitemtext {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+    color: #fff;
+}
+
+.listasolicitudesamigoscontainerlistitemtext>span {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.listasolicitudesamigoscontainerlistitemtext>span>p {
+    font-size: 30px;
+    color: #0E212A;
+}
+
+.listasolicitudesamigoscontainerlistitemtextbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.listasolicitudesamigoscontainerlistitemtextbuttons> button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11rem;
+    height: 2.1rem;
+    text-align: center;
+    background-color: #a7c959;
+    border-radius: 6px;
+    color: #0E212A;
+    text-decoration: none;
+    padding: .5rem;
+    border: 3px solid #a7c959;
+    transition: all .3s;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.listasolicitudesamigoscontainerlistitemtextbuttons> button:hover {
+    background-color: #88ab39;
+}

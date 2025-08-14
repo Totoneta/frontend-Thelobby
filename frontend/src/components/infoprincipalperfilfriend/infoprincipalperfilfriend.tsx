@@ -1,21 +1,18 @@
-import { Link } from 'react-router-dom'
+/*import { Link } from 'react-router-dom'
 import './infoprincipalperfilfriend.css'
 import Redesx3Columnas from '../redesx3columnas/redesx3columnas'
 
+interface datouser = {
+    username: 'username'     
+    nombre: 'nombre'
+    pais: 'pais'     
+}
+*/
 export default function InfoPrincipalPerfilFriend() {
 
-    
-
-    const datosuser =
-    {
-        nombre: 'Tomás',
-        username: 'Totoneta',
-        pais: 'Argentina',
-    }
-
     return (
-
         <section className="infoprincipalperfilcontainer">
+        {/*
 
             <div className="infoprincipalperfiluserinfo">
                 <img className="img-user-perfil" src="./svg/navbar/user.svg" alt="Username" />
@@ -43,7 +40,7 @@ export default function InfoPrincipalPerfilFriend() {
                 <Link id="recomendacion-perfil" to="#">Recomendaciones</Link>
             </div>
 
+            */}
         </section>
-
     )
 }

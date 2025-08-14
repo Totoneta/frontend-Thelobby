@@ -1,9 +1,8 @@
 .carruselconselectorcontainer {
     width: 100%;
-    height: 80dvh;
+    height: 75dvh;
     overflow: hidden;
     position: relative;
-    padding: 4rem 0 0 0;
 }
 
 /*-------------------------------------------------------*/
@@ -12,7 +11,8 @@
 .carruselconselectorcontainerselector {
     position: absolute;
     bottom: 1rem;
-    right: 4rem;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,23 +44,22 @@
 .carruselconselectorimagenesytexto {
     display: none;
     flex-direction: column;
-    height: 72dvh;
+    height: 100%;
     width: 100%;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
     color: #fff;
     text-align: center;
-    transition: all 0.5s ease-in-out;
     opacity: 0;
+}
+
+.carruselconselectorimagenesytexto>img {
+    height: 100%;
+    width: 100%;
 }
 
 .carruselconselectorimagenesytexto.visible {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
     opacity: 1;
 }
 

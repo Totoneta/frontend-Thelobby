@@ -1,0 +1,61 @@
+.endirectoiniciocontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 2rem 0;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.endirectoiniciocontainer>h3 {
+    font-size: 25px;
+}
+
+.endirectoiniciocontainer>h3>strong {
+    font-size: 40px;
+    color: #d905ce;
+}
+
+.endirectoiniciocontainertarjetasyvermas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.endirectoiniciocontainertarjeta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: max-content;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: left;
+    transition: all .3s;
+}
+
+.endirectoiniciocontainertarjeta:hover {
+    scale: 103%;
+}
+
+.endirectoiniciocontainertarjetaimgrenvivo {
+    height: 15rem;
+    width: 12rem;
+}
+
+.endirectoiniciocontainertarjetaimgarrow {
+    height: 4rem;
+}
+
+.explorarmasdirectos {
+    padding: 1rem;
+}

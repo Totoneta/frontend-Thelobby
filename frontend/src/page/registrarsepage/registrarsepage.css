@@ -1,5 +1,4 @@
 .registrarsepagecontainer {
-    height: 100dvh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -8,7 +7,7 @@
     gap: 1rem;
     background-color: #0E212A;
     color: #75d569;
-    padding-top: 5rem;
+    padding-top: 7rem;
 }
 
 .registrarsepagecontainer>h2 {

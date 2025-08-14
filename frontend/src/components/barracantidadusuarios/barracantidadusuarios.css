@@ -1,0 +1,43 @@
+.barracantidadusuarioscontainer {
+    height: 5.5rem;
+    background-color: #56BCB9;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.barracantidadusuarioscontainer>img {
+    height: 3rem;
+}
+
+.barracantidadusuarioscontainerdatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barracantidadusuarioscontainerdatostexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: #fff;
+}
+
+.barracantidadusuarioscontainerdatostexto>p {
+    font-size: 55px;
+}
+
+.barracantidadusuarioscontainerdatostexto>span {
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+

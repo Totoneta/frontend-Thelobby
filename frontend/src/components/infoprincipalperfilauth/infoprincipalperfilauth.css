@@ -9,7 +9,7 @@
     padding: 5rem 2rem 2rem 2rem;
     margin: 0 auto;
     background-color: #0E212A;
-    color: #75d569;
+    color: #a7c959;
 }
 
 /* Img user, pais, username, nombre */
@@ -63,7 +63,7 @@
     height: 100%;
     border-radius: 50%;
     background-color: #fff;
-    border: 3px solid #75d569;
+    border: 3px solid #a7c959;
     overflow: hidden;
 }
 
@@ -85,18 +85,18 @@
     width: 11rem;
     height: 2.1rem;
     text-align: center;
-    background-color: #75d569;
+    background-color: #a7c959;
     border-radius: 6px;
     color: #0E212A;
     text-decoration: none;
     padding: .5rem;
-    border: 3px solid #75d569;
+    border: 3px solid #a7c959;
     transition: all .3s;
     font-weight: bold;
     font-size: 18px;
 }
 
 .infoprincipalperfilbtninteractuar>a:hover {
-    background-color: #75d5697f;
+    background-color: #a7c9597f;
 }
 

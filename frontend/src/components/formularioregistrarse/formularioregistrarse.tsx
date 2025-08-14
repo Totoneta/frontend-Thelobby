@@ -6,6 +6,8 @@ interface FormularioRegistrarse {
     username: string
     nombre: string
     nacionalidad: string
+    juegoprimero: string
+    juegoprimeronivel: string
     email: string
     password: string
 }
@@ -17,6 +19,18 @@ const opcionesNacionalidad = [
     { value: 'FR', label: 'Francia' },
 ];
 
+/* Opciones Juegos */
+const opcionesJuegos = [
+    { value: 'CSGO2', label: 'CSGO2' },
+    { value: 'ROCKETLEAGUE', label: 'ROCKET LEAGUE' },
+    { value: 'GTAV', label: 'GTAV' },
+    { value: 'MINECRAFT', label: 'MINECRAFT' },
+    { value: 'DONTSTARVETOGETHER', label: 'DONT STARVE TOGETHER' },
+    { value: 'FIFA', label: 'FIFA' },
+    { value: 'FORTNITE', label: 'FORTNITE' },
+    { value: 'RAINBOW6', label: 'RAINBOW6' },
+];
+
 export default function FormularioRegistrarse() {
 
     const navigate = useNavigate()
@@ -25,13 +39,18 @@ export default function FormularioRegistrarse() {
         username: "",
         nombre: "",
         nacionalidad: "",
+        juegoprimero: "",
+        juegoprimeronivel: "",
         email: "",
         password: "",
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -72,6 +91,7 @@ export default function FormularioRegistrarse() {
                     required
                 />
             </div>
+
             <div className="formularioregistrarsenombre">
                 <label htmlFor="nombreregistrarse">Nombre y apellido</label>
                 <input
@@ -84,6 +104,7 @@ export default function FormularioRegistrarse() {
                     required
                 />
             </div>
+
             <div className="formularioregistrarseemail">
                 <label htmlFor="emailregistrarse">Email</label>
                 <input
@@ -96,8 +117,9 @@ export default function FormularioRegistrarse() {
                     required
                 />
             </div>
+
             <div className="formularioregistrarsenacionalidad">
-            <label htmlFor="nacionalidadregistrarse">Nacionalidad</label>
+                <label htmlFor="nacionalidadregistrarse">Nacionalidad</label>
                 <select
                     name="nacionalidad"
                     id="nacionalidadregistrarse"
@@ -105,14 +127,44 @@ export default function FormularioRegistrarse() {
                     onChange={handleChange}
                     required
                 >
-                    <option value="">Seleccione una opción</option>
                     {opcionesNacionalidad.map((option) => (
                         <option key={option.value} value={option.value}>
                             {option.label}
                         </option>
                     ))}
                 </select>
-                </div>
+            </div>
+
+            <div className="formularioregistrarsenacionalidad">
+                <label htmlFor="juegosregistrarse1">Juego Favorito </label>
+                <select
+                    name="juegoprimero"
+                    id="juegosregistrarse1"
+                    value={formData.juegoprimero}
+                    onChange={handleChange}
+                    required
+                >
+                    {opcionesJuegos.map((option) => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
+                </select>
+            </div>
+
+            <div className="formularioregistrarseemail">
+                <label htmlFor="rangoregistrarse">Rango</label>
+                <input
+                    id="rangoregistrarse"
+                    type="text"
+                    name="juegoprimeronivel"
+                    placeholder="Rango"
+                    value={formData.juegoprimeronivel}
+                    onChange={handleChange}
+                    required
+                />
+            </div>
+
             <div className="formularioregistrarsepassword">
                 <label htmlFor="passwordregistrarse">Contraseña</label>
                 <input
@@ -125,6 +177,7 @@ export default function FormularioRegistrarse() {
                     required
                 />
             </div>
+
             <button type="submit">Registrarse</button>
 
 

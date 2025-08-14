@@ -1,3 +1,69 @@
 .editarperfilcontainer {
-    padding: 5rem 1rem 1rem 1rem ;
+    padding: 7rem 1rem 1rem 1rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100dvh;
+    margin: 0 auto;
+    height: max-content;
+    color: #a7c959;
+    background-color: #0e212a;
+}
+
+.editarperfilinfousercontainer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.editarperfilinfousercontainer>h3 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.editarperfilinfousercontainer>label {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 40rem;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    font-size: 20px;
+}
+
+.editarperfilinfousercontainer>label>select,
+.editarperfilinfousercontainer>label>input {
+    padding: .5rem .3rem;
+    border: 1px solid #a7c959;
+    background-color: #0e212a;
+    color: #a7c959;
+    outline: none;
+}
+
+.editarperfilcontainer>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11rem;
+    height: 2.8rem;
+    text-align: center;
+    background-color: #a7c959;
+    border-radius: 6px;
+    color: #0E212A;
+    text-decoration: none;
+    padding: .5rem;
+    border: 3px solid #a7c959;
+    transition: all .3s;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 1rem auto;
+}
+.editarperfilcontainer>button:hover {
+    scale: 105%;
 }

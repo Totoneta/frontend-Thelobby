@@ -24,12 +24,11 @@ export const FormularioIniciarSesion: React.FC = () => {
                 },
                 body: JSON.stringify(data),
             });
-
             const result = await response.json();
 
             if (response.ok) {
-                dispatch(InicioExitoso(result.access, result.usuario));
-                navigate('/perfil');
+                dispatch(InicioExitoso(result.access));
+                navigate('/');
             } else {
                 dispatch(InicioFallido(result.error));
             }

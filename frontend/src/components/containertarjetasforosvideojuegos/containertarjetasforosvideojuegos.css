@@ -9,10 +9,9 @@
 
 /*------------------------------------------------*/
 
-/* Tarjetas Triples */
+/* Tarjetas grandes */
 .tajetatripleforoscontainer {
-    display: grid;
-    grid-template-columns: 18rem 18rem 18rem;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -21,7 +20,6 @@
 }
 
 .tajetatripleforoscontainer>a {
-
     transition: all .3s;
     display: flex;
     justify-content: center;
@@ -35,8 +33,8 @@
 
 .tajetatripleforoscontainer>a>img {
     height: 22rem;
-    width: 100%;
-    border-radius: 60px;
+    width: 13rem;
+    border-radius: 20px;
 
 }
 
@@ -65,8 +63,8 @@
 
 .tarjetasconexplorarmascards>a>img {
     height: 11rem;
-    width: 100%;
-    border-radius: 100px;
+    width: 6rem;
+    border-radius: 20px;
     transition: all .3s;
 }
 
@@ -80,7 +78,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 20rem;
     height: 7rem;
     padding: 1rem;
     text-decoration: none;
@@ -88,6 +86,11 @@
     font-size: 30px;
     border-radius: 16px;
     text-align: left;
+    transition: all .3s;
+}
+
+.tarjetasconexplorarmascontainer>a:hover {
+    scale: 105%;
 }
 
 .tarjetasconexplorarmascontainer>a>p {

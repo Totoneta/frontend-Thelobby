@@ -11,6 +11,8 @@ import AmigosPage from "../page/amigospage/amigospage";
 import PartidasPage from "../page/partidaspage/partidaspage";
 import EditarPerfil from "../page/editarperfil/editarperfil";
 import PerfilFriendPage from "../page/perfilfriendpage/perfilfirendpage";
+import DescubreAmigosPage from "../page/descubreamigos/descubreamigospage";
+import SolicitudDeAmistadPage from "../page/solicituddeamistadpage/solicituddeamistadpage";
 
 
 
@@ -24,11 +26,13 @@ export default function Rutas() {
                 {/* Rutas Página */}
                 <Route path="/" element={<InicioPage />} />
                 <Route path="/partidas" element={<PartidasPage />} />
+                <Route path="/descubreamigos" element={<DescubreAmigosPage />} />
                 <Route path="/amigos" element={<AmigosPage />} />
                 <Route path="/blog" element={<ForosPage />} />
 
                 {/* Rutas Usuario */}
                 <Route path="/perfilamigo" element={<PerfilFriendPage />} />
+                <Route path="/solicitudesdeamistad" element={<SolicitudDeAmistadPage />} />
                 <Route path="/perfil" element={<PerfilPage />} />
                 <Route path="/editarperfil" element={<EditarPerfil />} />
                 <Route path="/iniciarsesion" element={<IniciarSesionPage />} />

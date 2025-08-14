@@ -1,0 +1,112 @@
+.info-s-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    border-top: 1px solid #a7c959;
+    border-bottom: 1px solid #a7c959;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 80%;
+    gap: 1rem;
+}
+
+.texto-info-s-primero {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    height: 90%;
+    gap: .5rem;
+    font-weight: bold;
+    width: 30%;
+}
+
+/* Juguemos */
+.texto-info-s-primero-enbuscade {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    gap: .5rem;
+    font-weight: bold;
+    width: 30%;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #a7c959;
+    color: #09092B;
+    border: 3px solid #a7c959;
+}
+
+
+.enbuscade-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: .5rem;
+}
+
+.buscando-juegosyrango {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+    padding: .3rem .5rem;
+    flex-direction: column;
+}
+
+.juegosyrangounocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.juegosyrangounocontainer>img {
+    height: 2rem;
+    margin: 0 auto;
+    scale: 1;
+}
+
+.juegosyrangounocontainer>p {
+    margin: 0 auto;
+}
+
+/* FIN Buscando */
+
+
+
+/* Ping / ms */
+.promedio-ms>span {
+    color: green;
+}
+
+.ms-color-ball {
+    height: 1rem;
+    width: 1rem;
+    background-color: green;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+/* Días */
+.dias {
+    display: flex;
+    gap: .3rem;
+}
+
+.dia-lunes,
+.dia-martes,
+.dia-viernes,
+.dia-sabado,
+.dia-domingo {
+    text-shadow: 0px 0px 5px #a7c959;
+}
+
+.dia-miercoles,
+.dia-jueves {
+    opacity: .3;
+}

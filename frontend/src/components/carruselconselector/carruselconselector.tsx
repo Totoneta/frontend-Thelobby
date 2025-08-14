@@ -42,8 +42,8 @@ export const CarruselConSelector: React.FC = () => {
                     <li
                         key={index}
                         className={`carruselconselectorimagenesytexto ${index === indexcarrusel ? 'visible' : 'hidden'}`}
-                        style={{ backgroundImage: `url(${e.imgpath})` }}
-                    >
+                        >
+                        <img src={e.imgpath} alt={e.id.toString()} />
                     </li>
                 ))}
             </ul>
