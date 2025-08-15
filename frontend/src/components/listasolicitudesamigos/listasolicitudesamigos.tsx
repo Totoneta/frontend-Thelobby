@@ -10,7 +10,7 @@ export default function ListaSolicitudesAmigos() {
     // Obtener solicitudes pendientes
     const obtenerSolicitudesPendientes = async () => {
         try {
-            const response = await fetch('http://localhost:8000/api/amistades/solicitudespendientes/', {
+            const response = await fetch('https://backend-thelobby.onrender.com/api/amistades/solicitudespendientes/', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -38,7 +38,7 @@ export default function ListaSolicitudesAmigos() {
     // Aceptar solicitud de amistad
     const aceptarSolicitud = async (solicitudId: number) => {
         try {
-            const response = await fetch(`http://localhost:8000/api/amistades/${solicitudId}/aceptar_solicitud/`, {
+            const response = await fetch(`https://backend-thelobby.onrender.com/api/amistades/${solicitudId}/aceptar_solicitud/`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -63,7 +63,7 @@ export default function ListaSolicitudesAmigos() {
     // Rechazar solicitud de amistad
     const rechazarSolicitud = async (solicitudId: number) => {
         try {
-            const response = await fetch(`http://localhost:8000/api/amistades/${solicitudId}/rechazar_solicitud/`, {
+            const response = await fetch(`https://backend-thelobby.onrender.com/api/amistades/${solicitudId}/rechazar_solicitud/`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

@@ -14,7 +14,7 @@ export const ListaUsuarios = () => {
     useEffect(() => {
         const fetchUsuariosRandom = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/usuarios/', {
+                const response = await fetch('https://backend-thelobby.onrender.com/api/usuarios/', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -39,7 +39,7 @@ export const ListaUsuarios = () => {
     // Enviar una solicitud de amistad
     const enviarSolicitud = async (usuarioId: number | null) => {
         try {
-            const response = await fetch(`http://localhost:8000/api/amistades/${usuarioId}/enviar_solicitud/`, {
+            const response = await fetch(`https://backend-thelobby.onrender.com/api/amistades/${usuarioId}/enviar_solicitud/`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

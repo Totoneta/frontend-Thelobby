@@ -56,7 +56,7 @@ export default function FormularioRegistrarse() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8000/sesion/registrarse/", {
+            const response = await fetch("https://backend-thelobby.onrender.com/sesion/registrarse/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

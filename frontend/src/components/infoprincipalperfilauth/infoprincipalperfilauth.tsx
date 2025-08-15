@@ -11,7 +11,7 @@ import { InformacionRecibidaExitosamente } from '../../redux/actions';
 import axios from "axios";
 
 export default function InfoPrincipalPerfilAuth() {
-    const USERDATA_APIURL = `http://localhost:8000/api/perfil/`;
+    const USERDATA_APIURL = `https://backend-thelobby.onrender.com/api/perfil/`;
     const dispatch = useDispatch();
     const token = useSelector((state: RootState) => state.auth.token);
     const usuario = useSelector((state: RootState) => state.info);

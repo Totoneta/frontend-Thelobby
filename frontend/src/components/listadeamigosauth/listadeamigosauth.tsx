@@ -11,7 +11,7 @@ import { UsuarioData } from '../../redux/reducers';
 
 export default function ListaDeAmigosAuth() {
     const [amigos, setAmigos] = useState<UsuarioData[]>([])
-    const USERDATA_APIURL = `http://localhost:8000/api/amistades/amistades`;
+    const USERDATA_APIURL = `https://backend-thelobby.onrender.com/api/amistades/amistades`;
     const token = useSelector((state: RootState) => state.auth.token);
 
     useEffect(() => {
