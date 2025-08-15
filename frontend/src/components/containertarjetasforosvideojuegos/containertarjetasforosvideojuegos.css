@@ -110,19 +110,23 @@
     /* Container */
     .containertarjetasforosvideojuegoscontainer {
         flex-direction: column;
+        padding: 0;
     }
 
     /*------------------------------------------------*/
 
     /* Tarjetas Triples */
     .tajetatripleforoscontainer {
-        grid-template-columns: 7rem 7rem 7rem;
-        flex-direction: column;
-        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: .3rem;
+        width: 100%;
+        gap: .3rem;
     }
 
     .tajetatripleforoscontainer>a>img {
         height: 16rem;
+        width: 100%;
         border-radius: 10px;
     }
 

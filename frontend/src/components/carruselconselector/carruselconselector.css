@@ -89,7 +89,7 @@
 /* Mediaquerys 350px a 720px */
 @media (min-width: 350px) and (max-width: 720px) {
     .carruselconselectorcontainer {
-        height: 60vh;
+        height: 30vh;
     }
 
     /* Selectores */
@@ -106,25 +106,7 @@
 
     /* Contenedos de imagenes */
     .carruselconselectorimagenesytexto {
-        height: 85vh;
+        height: 30vh;
     }
 
-    .carruselconselectorimagenesytexto.visible {
-        justify-content: center;
-    }
-
-    .carruselconselectorimagenesytexto.hidden {
-        opacity: 0;
-    }
-
-    /* Texto */
-    .carruselconselectorimagenesytexto>h3 {
-        font-size: 30px;
-        padding: .5rem .3rem;
-    }
-
-    .carruselconselectorimagenesytexto>span {
-        font-size: 20px;
-        padding: .5rem .3rem;
-    }
 }

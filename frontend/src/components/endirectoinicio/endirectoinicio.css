@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     padding: 2rem 0;
-    width: max-content;
+    width: 100%;
+    text-align: center;
     margin: 0 auto;
 }
 
@@ -14,21 +15,18 @@
 
 .endirectoiniciocontainer>h3>strong {
     font-size: 40px;
-    color: #d905ce;
+    color: #94008d;
 }
 
 .endirectoiniciocontainertarjetasyvermas {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 2rem 0;
 }
 
 .endirectoiniciocontainertarjeta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +41,8 @@
     transition: all .3s;
 }
 
-.endirectoiniciocontainertarjeta:hover {
+.endirectoiniciocontainertarjeta:hover,
+.explorarmasdirectos:hover {
     scale: 103%;
 }
 
@@ -58,4 +57,74 @@
 
 .explorarmasdirectos {
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15rem;
+    width: max-content;
+    text-decoration: none;
+    color: #000;
+    background-color: aliceblue;
+    font-size: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: left;
+    transition: all .3s;
+}
+
+/*-------------------------------------------------------*/
+
+@media (min-width: 350px) and (max-width: 720px) {
+    .endirectoiniciocontainer {
+        padding: 1.5rem 0;
+    }
+
+    .endirectoiniciocontainer>h3 {
+        font-size: 14px;
+    }
+
+    .endirectoiniciocontainer>h3>strong {
+        font-size: 35px;
+    }
+
+    .endirectoiniciocontainertarjetasyvermas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 1rem 0;
+        gap: .5rem;
+    }
+
+    .endirectoiniciocontainertarjeta {
+        height: 10rem;
+        width: 7rem;
+        font-size: 25px;
+        border-radius: 16px;
+        text-align: center;
+    }
+    
+    .endirectoiniciocontainertarjeta:hover {
+        scale: 103%;
+    }
+    
+    .endirectoiniciocontainertarjetaimgrenvivo {
+        height: 10rem;
+        width: 7rem;
+    }
+    
+    .endirectoiniciocontainertarjetaimgarrow {
+        height: 4rem;
+    }
+    
+    .explorarmasdirectos {
+        grid-column: 1 / -1;
+        height: 6rem;
+        width: 100%;
+        gap: 1rem;
+        padding: .5rem;
+        font-size: 25px;
+        border-radius: 16px;
+        text-align: center;
+        flex-direction: row;
+    }
 }

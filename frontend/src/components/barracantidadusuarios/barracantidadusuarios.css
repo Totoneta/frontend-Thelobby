@@ -34,6 +34,25 @@
     font-size: 24px;
 }
 
+/*------------------------------------------------------*/
+
+@media (min-width: 350px) and (max-width: 720px) {
+    .barracantidadusuarioscontainer {
+    height: 4rem;
+    gap: .3rem;
+}
+
+.barracantidadusuarioscontainer>img {
+    height: 1.5rem;
+}
+.barracantidadusuarioscontainerdatostexto>p {
+    font-size: 18px;
+}
+
+.barracantidadusuarioscontainerdatostexto>span {
+    font-size: 8px;
+}
+}
 
 
 

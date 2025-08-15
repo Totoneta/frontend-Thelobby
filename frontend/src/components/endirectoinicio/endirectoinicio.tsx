@@ -5,7 +5,7 @@ export default function EnDirectoInicio() {
 
     return (
         <section className="endirectoiniciocontainer">
-            <h3>LOS MEJORES DIRECTOS EN <strong>TWITCH</strong></h3>
+            <h3>LOS MEJORES DIRECTOS EN <br /><strong>TWITCH</strong></h3>
             <div className="endirectoiniciocontainertarjetasyvermas">
                 <Link to='https://www.twitch.tv/directory/category/league-of-legends' className="endirectoiniciocontainertarjeta" target='_blank'>
                     <img className='endirectoiniciocontainertarjetaimgrenvivo' src="/img/endirecto/loldirecto.jpg" alt="LEAGUE OF LEGENDS" />
@@ -25,7 +25,7 @@ export default function EnDirectoInicio() {
                 <Link to='https://www.twitch.tv/directory/category/rust' className="endirectoiniciocontainertarjeta" target='_blank'>
                     <img className='endirectoiniciocontainertarjetaimgrenvivo' src="/img/endirecto/rustdirecto.jpg" alt="RUST" />
                 </Link>
-                <Link to='#' className="endirectoiniciocontainertarjeta explorarmasdirectos" >
+                <Link to='#' className=" explorarmasdirectos" >
                     <p>DESCUBRE<br />MUCHO MÁS</p>
                     <img className='endirectoiniciocontainertarjetaimgarrow' src="/svg/arrowright.svg" alt="" />
                 </Link>
