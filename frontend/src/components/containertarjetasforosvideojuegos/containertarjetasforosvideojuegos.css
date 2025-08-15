@@ -120,14 +120,18 @@
         display: grid;
         grid-template-columns: 50% 50%;
         padding: .3rem;
-        width: 100%;
-        gap: .3rem;
+        width: 97%;
+        gap: .5rem;
     }
 
     .tajetatripleforoscontainer>a>img {
         height: 16rem;
         width: 100%;
         border-radius: 10px;
+    }
+
+    .tajetatripleforoscontainer>a:hover {
+        scale: 103%;
     }
 
     /*------------------------------------------------*/
