@@ -6,7 +6,9 @@ import { setUsuario } from './../../redux/actions';
 import { useNavigate } from 'react-router-dom';
 
 /* Juegos y rangos */
-import { opcionesJuegos, opcionesRangosFortnite, opcionesRangosRocket } from '../../data/juegosyrangos';
+import { opcionesJuegos, rangosPorJuego } from '../../data/juegosyrangos';
+/* Nacionalidad */
+import { opcionesNacionalidad } from '../../data/nacionalidad';
 
 export default function EditarPerfil() {
     const dispatch = useDispatch();
@@ -18,9 +20,10 @@ export default function EditarPerfil() {
         username: usuario?.username || '',
         nombre: usuario?.nombre || '',
         nacionalidad: usuario?.nacionalidad || '',
-        juegoprimero: "",
-        juegoprimeronivel: "",
+        juegoprimero: usuario?.juegoprimero || "",
+        juegoprimeronivel: usuario?.juegoprimeronivel || "",
     });
+    console.log(usuario.nacionalidad);
 
     useEffect(() => {
         if (usuario) {
@@ -28,8 +31,8 @@ export default function EditarPerfil() {
                 username: usuario.username || '',
                 nombre: usuario.nombre || '',
                 nacionalidad: usuario.nacionalidad || '',
-                juegoprimero: "",
-                juegoprimeronivel: "",
+                juegoprimero: usuario.juegoprimero || '',
+                juegoprimeronivel: usuario.juegoprimeronivel || '',
             });
         }
     }, [usuario])
@@ -76,15 +79,6 @@ export default function EditarPerfil() {
             alert(`Hubo un error al actualizar el perfil: ${error}`);
         }
     };
-
-    /* Opciones Nacionalidad */
-    const opcionesNacionalidad = [
-        { value: 'AR', label: 'Argentina' },
-        { value: 'ES', label: 'España' },
-        { value: 'IT', label: 'Italia' },
-        { value: 'FR', label: 'Francia' },
-    ];
-    
 
     // Deshabilitar el botón
     const isButtonDisabled = !(
@@ -149,70 +143,50 @@ export default function EditarPerfil() {
                     </select>
                 </label>
 
-                {
-                    formData.juegoprimero === 'CSGO2' ?
+                {formData.juegoprimero && (
+                    <label htmlFor="rangoselect">
+                        Rango
+                        {(() => {
+                            // Buscar el juego seleccionado
+                            const juegoSeleccionado = rangosPorJuego.find(
+                                (j) => j.game === formData.juegoprimero
+                            );
 
-                        <label htmlFor="rangocsgo2">
-                            Rango
-                            <input
-                                id="rangocsgo2"
-                                type="text"
-                                name="juegoprimeronivel"
-                                placeholder="Rango"
-                                value={formData.juegoprimeronivel}
-                                onChange={handleChange}
-                                required
-                            /></label> :
-                        <></>
-                }
+                            // Si tiene rangos definidos, mostrar select
+                            if (juegoSeleccionado && juegoSeleccionado.rangos.length > 0) {
+                                return (
+                                    <select
+                                        name="juegoprimeronivel"
+                                        id="rangoselect"
+                                        value={formData.juegoprimeronivel}
+                                        onChange={handleChange}
+                                        required
+                                    >
+                                        <option value="">Selecciona una opción</option>
+                                        {juegoSeleccionado.rangos.map((rango) => (
+                                            <option key={rango.value} value={rango.value}>
+                                                {rango.label}
+                                            </option>
+                                        ))}
+                                    </select>
+                                );
+                            }
 
-                {
-                    formData.juegoprimero === 'ROCKETLEAGUE' ?
-
-                        <label htmlFor="rangorocketleague">
-                            Rango
-                            <select
-                                name="juegoprimeronivel"
-                                id="rangorocketleague"
-                                value={formData.juegoprimeronivel}
-                                onChange={handleChange}
-                                required
-                            >
-                                <option value="">Selecciona una opción</option>
-
-                                {opcionesRangosRocket.map((option) => (
-                                    <option key={option.value} value={option.value}>
-                                        {option.label}
-                                    </option>
-                                ))}
-                            </select>
-                        </label> :
-                        <></>
-                }
-
-                {
-                    formData.juegoprimero === 'FORTNITE' ?
-
-                        <label htmlFor="rangofortnite">
-                            Rango
-                            <select
-                                name="juegoprimeronivel"
-                                id="rangofortnite"
-                                value={formData.juegoprimeronivel}
-                                onChange={handleChange}
-                                required
-                            >
-                                <option value="">Selecciona una opción</option>
-
-                                {opcionesRangosFortnite.map((option) => (
-                                    <option key={option.value} value={option.value}>
-                                        {option.label}
-                                    </option>
-                                ))}
-                            </select>
-                        </label> :
-                        <></>
-                }
+                            // Si no tiene rangos definidos (por ejemplo CSGO2)
+                            return (
+                                <input
+                                    id="rangoselect"
+                                    type="text"
+                                    name="juegoprimeronivel"
+                                    placeholder="Rango"
+                                    value={formData.juegoprimeronivel}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            );
+                        })()}
+                    </label>
+                )}
 
             </section>
 

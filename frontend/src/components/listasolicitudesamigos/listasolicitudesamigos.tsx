@@ -6,11 +6,12 @@ import { RootState } from './../../redux/store';
 export default function ListaSolicitudesAmigos() {
     const [solicitudesPendientes, setSolicitudesPendientes] = useState<any[]>([]);
     const token = useSelector((state: RootState) => state.auth.token);
+    const [ usuarioenviadordesolicitud, setUsuarioEnviadorDeSolicitud ] = useState(null)
 
     // Obtener solicitudes pendientes
     const obtenerSolicitudesPendientes = async () => {
         try {
-            const response = await fetch('https://backend-thelobby.onrender.com/api/amistades/solicitudespendientes/', {
+            const response = await fetch('http://127.0.0.1:8000/api/amistades/solicitudespendientes/', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -22,6 +23,7 @@ export default function ListaSolicitudesAmigos() {
             if (response.ok) {
                 const data = await response.json();
                 console.log(data);
+                setUsuarioEnviadorDeSolicitud(data)
                 setSolicitudesPendientes(data);
             } else {
                 console.error('Error al obtener las solicitudes pendientes');
@@ -38,7 +40,7 @@ export default function ListaSolicitudesAmigos() {
     // Aceptar solicitud de amistad
     const aceptarSolicitud = async (solicitudId: number) => {
         try {
-            const response = await fetch(`https://backend-thelobby.onrender.com/api/amistades/${solicitudId}/aceptar_solicitud/`, {
+            const response = await fetch(`http://127.0.0.1:8000/api/amistades/${usuarioenviadordesolicitud[0].usuario1_id}/aceptar_solicitud/`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -63,7 +65,7 @@ export default function ListaSolicitudesAmigos() {
     // Rechazar solicitud de amistad
     const rechazarSolicitud = async (solicitudId: number) => {
         try {
-            const response = await fetch(`https://backend-thelobby.onrender.com/api/amistades/${solicitudId}/rechazar_solicitud/`, {
+            const response = await fetch(`http://127.0.0.1:8000/api/amistades/${usuarioenviadordesolicitud[0].usuario1_id}/rechazar_solicitud/`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

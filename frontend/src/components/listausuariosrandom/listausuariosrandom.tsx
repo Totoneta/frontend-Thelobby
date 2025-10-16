@@ -14,7 +14,7 @@ export const ListaUsuarios = () => {
     useEffect(() => {
         const fetchUsuariosRandom = async () => {
             try {
-                const response = await fetch('https://backend-thelobby.onrender.com/api/usuarios/', {
+                const response = await fetch('http://127.0.0.1:8000/api/usuarios/', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -39,7 +39,7 @@ export const ListaUsuarios = () => {
     // Enviar una solicitud de amistad
     const enviarSolicitud = async (usuarioId: number | null) => {
         try {
-            const response = await fetch(`https://backend-thelobby.onrender.com/api/amistades/${usuarioId}/enviar_solicitud/`, {
+            const response = await fetch(`http://127.0.0.1:8000/api/amistades/${usuarioId}/enviar_solicitud/`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -68,11 +68,14 @@ export const ListaUsuarios = () => {
                 if (e.username !== usuariousername) {
                     return (
                         <li className='listausuariocontainerlistitem' key={e.id}>
-                            <img src="/img/perfil/perfilimguser.png" alt="" />
+                            <img src="/svg/navbar/user.svg" alt="" />
                             <div className="listausuariocontainerlistitemtext">
                                 <h3>{e.username}</h3>
                                 <span>{e.nombre}</span>
-                                <p>{e.nacionalidad}</p>
+                                <div className="listausuariocontainerlistitemtextnacionalidad">
+                                    <img src={`img/pais/${e.nacionalidad}.png`} alt="" />
+                                    <p>{e.nacionalidad}</p>
+                                </div>
                                 {e.id !== null && typeof e.id === 'number' && (
                                     <button onClick={() => enviarSolicitud(e.id)}>Agregar como amigo</button>
                                 )}

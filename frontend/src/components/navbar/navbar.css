@@ -117,6 +117,7 @@
 .navbarcontaineritemrightsocialmenudesplegablelist {
     list-style: none;
     position: absolute;
+    z-index: 10;
     top: 4rem;
     right: -2rem;
     padding: 1rem;

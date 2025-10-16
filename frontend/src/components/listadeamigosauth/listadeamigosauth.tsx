@@ -11,25 +11,25 @@ import { UsuarioData } from '../../redux/reducers';
 
 export default function ListaDeAmigosAuth() {
     const [amigos, setAmigos] = useState<UsuarioData[]>([])
-    const USERDATA_APIURL = `https://backend-thelobby.onrender.com/api/amistades/amistades`;
+    const USERDATA_APIURL = `http://127.0.0.1:8000/api/amistades/amistades`;
     const token = useSelector((state: RootState) => state.auth.token);
 
+    const fetchAmigos = async () => {
+        try {
+            const response = await axios.get(USERDATA_APIURL, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                },
+            });
+            
+            setAmigos(response.data)
+        } catch (error) {
+            console.error('Error al obtener los amigos:', error);
+        }
+    };
+
     useEffect(() => {
-        const fetchAmigos = async () => {
-            try {
-                const response = await axios.get(USERDATA_APIURL, {
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                    },
-                });
-                
-                setAmigos(response.data)
-            } catch (error) {
-                console.error('Error al obtener los amigos:', error);
-            }
-        };
-        
-        
+    
         if (token) {
             fetchAmigos();
         }

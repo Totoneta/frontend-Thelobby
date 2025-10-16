@@ -19,16 +19,15 @@
     height: 15rem;
     width: 35rem;
     gap: 4rem;
-    background-color: #56bcb9;
+    background-color: #0E212A;
     padding: 1rem 2rem;
 }
 
 .listausuariocontainerlistitem>img {
     height: 13rem;
-    width: 10rem;
-    border-radius: 10px;
-    background-color: #fff;
-    overflow: hidden;
+    width: 13rem;
+    border-radius: 50%;
+    background-color: #a7c959;
 }
 
 .listausuariocontainerlistitemtext {
@@ -40,11 +39,27 @@
     color: #fff;
 }
 
+/* Nombre */
 .listausuariocontainerlistitemtext>h3 {
     font-size: 30px;
-    color: #0E212A;
+    color: #a7c959;
 }
 
+/* Nacionalidad */
+.listausuariocontainerlistitemtextnacionalidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.listausuariocontainerlistitemtextnacionalidad>img {
+    height: 1rem;
+}
+.listausuariocontainerlistitemtextnacionalidad>p {
+    font-size: 14px;
+}
+
+/* Botón enviar solicitud */
 .listausuariocontainerlistitemtext>button {
     display: flex;
     justify-content: center;
@@ -65,5 +80,7 @@
 }
 
 .listausuariocontainerlistitemtext>button:hover {
-    background-color: #a7c9597f;
+    border: 3px solid #a7c959;
+    background-color: #0E212A;
+    color: #a7c959;
 }

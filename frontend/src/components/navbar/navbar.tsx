@@ -24,6 +24,7 @@ export default function NavBar() {
         //setBuscarValue(e.target)
     }
     */
+   
     /* Mostrar social */
     const [mostrarSocial, setMostrarSocial] = useState(false)
 

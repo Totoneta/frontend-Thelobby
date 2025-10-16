@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './formularioregistrarse.css'
+/* Juegos */
+import { opcionesJuegos, rangosPorJuego } from "../../data/juegosyrangos";
+/* Nacionalidad */
+import { opcionesNacionalidad } from "../../data/nacionalidad";
 
 interface FormularioRegistrarse {
     username: string
@@ -11,25 +15,6 @@ interface FormularioRegistrarse {
     email: string
     password: string
 }
-
-const opcionesNacionalidad = [
-    { value: 'AR', label: 'Argentina' },
-    { value: 'ES', label: 'España' },
-    { value: 'IT', label: 'Italia' },
-    { value: 'FR', label: 'Francia' },
-];
-
-/* Opciones Juegos */
-const opcionesJuegos = [
-    { value: 'CSGO2', label: 'CSGO2' },
-    { value: 'ROCKETLEAGUE', label: 'ROCKET LEAGUE' },
-    { value: 'GTAV', label: 'GTAV' },
-    { value: 'MINECRAFT', label: 'MINECRAFT' },
-    { value: 'DONTSTARVETOGETHER', label: 'DONT STARVE TOGETHER' },
-    { value: 'FIFA', label: 'FIFA' },
-    { value: 'FORTNITE', label: 'FORTNITE' },
-    { value: 'RAINBOW6', label: 'RAINBOW6' },
-];
 
 export default function FormularioRegistrarse() {
 
@@ -56,7 +41,7 @@ export default function FormularioRegistrarse() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            const response = await fetch("https://backend-thelobby.onrender.com/sesion/registrarse/", {
+            const response = await fetch("http://127.0.0.1:8000/sesion/registrarse/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -135,7 +120,7 @@ export default function FormularioRegistrarse() {
                 </select>
             </div>
 
-            <div className="formularioregistrarsenacionalidad">
+            <div className="formularioregistrarsejuego">
                 <label htmlFor="juegosregistrarse1">Juego Favorito </label>
                 <select
                     name="juegoprimero"
@@ -152,18 +137,39 @@ export default function FormularioRegistrarse() {
                 </select>
             </div>
 
-            <div className="formularioregistrarseemail">
-                <label htmlFor="rangoregistrarse">Rango</label>
-                <input
-                    id="rangoregistrarse"
-                    type="text"
-                    name="juegoprimeronivel"
-                    placeholder="Rango"
-                    value={formData.juegoprimeronivel}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
+            {formData.juegoprimero && (
+                <div className="formularioregistrarsejuegonivel">
+                    <label htmlFor="rangoselect">
+                        Rango
+                    </label>
+                    {(() => {
+                        // Buscar el juego seleccionado
+                        const juegoSeleccionado = rangosPorJuego.find(
+                            (j) => j.game === formData.juegoprimero
+                        );
+
+                        // Si tiene rangos definidos, mostrar select
+                        if (juegoSeleccionado && juegoSeleccionado.rangos.length > 0) {
+                            return (
+                                <select
+                                    name="juegoprimeronivel"
+                                    id="rangoselect"
+                                    value={formData.juegoprimeronivel}
+                                    onChange={handleChange}
+                                    required
+                                >
+                                    <option value="">Selecciona una opción</option>
+                                    {juegoSeleccionado.rangos.map((rango) => (
+                                        <option key={rango.value} value={rango.value}>
+                                            {rango.label}
+                                        </option>
+                                    ))}
+                                </select>
+                            );
+                        }
+                    })()}
+                </div>
+            )}
 
             <div className="formularioregistrarsepassword">
                 <label htmlFor="passwordregistrarse">Contraseña</label>

@@ -18,6 +18,8 @@
 .formularioregistrarseusername,
 .formularioregistrarsenombre,
 .formularioregistrarsenacionalidad,
+.formularioregistrarsejuego,
+.formularioregistrarsejuegonivel,
 .formularioregistrarsepassword,
 .formularioregistrarseemail {
     display: flex;
@@ -37,6 +39,8 @@
 .formularioregistrarsenacionalidad>select,
 .formularioregistrarsepassword>input,
 .formularioregistrarsenacionalidad>select>option,
+.formularioregistrarsejuego>select,
+.formularioregistrarsejuegonivel>select,
 .formularioregistrarseemail>input {
     width: 100%;
     padding: .5rem .8rem;

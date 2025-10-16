@@ -11,7 +11,7 @@ import { InformacionRecibidaExitosamente } from '../../redux/actions';
 import axios from "axios";
 
 export default function InfoPrincipalPerfilAuth() {
-    const USERDATA_APIURL = `https://backend-thelobby.onrender.com/api/perfil/`;
+    const USERDATA_APIURL = `http://127.0.0.1:8000/api/perfil/`;
     const dispatch = useDispatch();
     const token = useSelector((state: RootState) => state.auth.token);
     const usuario = useSelector((state: RootState) => state.info);
@@ -25,17 +25,17 @@ export default function InfoPrincipalPerfilAuth() {
                             Authorization: `Bearer ${token}`,
                         },
                     });
-
+                    console.log(response);
                     dispatch(InformacionRecibidaExitosamente(response.data));
                 } catch (error) {
                     console.error("Error al obtener los datos del perfil", error);
                 }
             };
-            console.log(usuario);
-
+            
             fetchUserData();
         }
     }, [token, usuario, dispatch, USERDATA_APIURL]);
+    console.log(usuario);
 
     return (
         <section className="infoprincipalperfilcontainer">
@@ -47,7 +47,7 @@ export default function InfoPrincipalPerfilAuth() {
                         <span>{usuario?.nombre}</span>
                         <div className="imgpaisperfilcontainer">
                             <img
-                                src={`./img/pais/${usuario?.nacionalidad ?? 'default'}.png`}
+                                src={`./img/pais/${usuario?.nacionalidad}.png`}
                                 alt={usuario?.nacionalidad ?? 'nacionalidad desconocida'}
                             />
                             <span>{usuario?.nacionalidad}</span>
