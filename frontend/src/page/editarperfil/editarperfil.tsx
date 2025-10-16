@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from './../../redux/store';
 import { setUsuario } from './../../redux/actions';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 /* Juegos y rangos */
 import { opcionesJuegos, rangosPorJuego } from '../../data/juegosyrangos';
@@ -115,8 +115,6 @@ export default function EditarPerfil() {
                         value={formData.nacionalidad}
                         onChange={handleChange}
                     >
-                        <option value="">Selecciona una opción</option>
-
                         {opcionesNacionalidad.map((option) => (
                             <option key={option.value} value={option.value}>
                                 {option.label}
@@ -133,8 +131,6 @@ export default function EditarPerfil() {
                         onChange={handleChange}
                         required
                     >
-                        <option value="">Selecciona una opción</option>
-
                         {opcionesJuegos.map((option) => (
                             <option key={option.value} value={option.value}>
                                 {option.label}
@@ -199,6 +195,12 @@ export default function EditarPerfil() {
             >
                 Actualizar perfil
             </button>
+            <Link
+                to='/perfil'
+                className="editarperfilbtn"
+            >
+                Cancelar
+            </Link>
         </form>
     );
 }

@@ -45,7 +45,8 @@
     outline: none;
 }
 
-.editarperfilcontainer>button {
+.editarperfilcontainer>button,
+.editarperfilcontainer>a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,6 +65,7 @@
     cursor: pointer;
     margin: 1rem auto;
 }
-.editarperfilcontainer>button:hover {
+.editarperfilcontainer>button:hover,
+.editarperfilcontainer>a:hover {
     scale: 105%;
 }

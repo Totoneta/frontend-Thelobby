@@ -99,7 +99,6 @@ export default function NavBar() {
                             <Link to='/perfil' className="navbarcontaineritemrightusuario">
                                 <img src="svg/navbar/user.svg" alt="Perfil" />
                                 <p>Perfil</p>
-                                <img id='arrowdownnavbar' src="/svg/navbar/arrowdown.svg" alt="Ver más" />
                             </Link>
                             :
                             <Link to='/iniciarsesion' className="navbarcontaineritemrightusuario">

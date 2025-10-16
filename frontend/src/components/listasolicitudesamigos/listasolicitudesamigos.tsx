@@ -3,38 +3,22 @@ import './listasolicitudesamigos.css'
 import { useSelector } from 'react-redux';
 import { RootState } from './../../redux/store';
 
+/* Peticiones */
+import { obtenerSolicitudesPendientes } from '../../peticiones/peticionesapi';
+
 export default function ListaSolicitudesAmigos() {
     const [solicitudesPendientes, setSolicitudesPendientes] = useState<any[]>([]);
     const token = useSelector((state: RootState) => state.auth.token);
-    const [ usuarioenviadordesolicitud, setUsuarioEnviadorDeSolicitud ] = useState(null)
-
-    // Obtener solicitudes pendientes
-    const obtenerSolicitudesPendientes = async () => {
-        try {
-            const response = await fetch('http://127.0.0.1:8000/api/amistades/solicitudespendientes/', {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
-                },
-            });
-
-
-            if (response.ok) {
-                const data = await response.json();
-                console.log(data);
-                setUsuarioEnviadorDeSolicitud(data)
-                setSolicitudesPendientes(data);
-            } else {
-                console.error('Error al obtener las solicitudes pendientes');
-            }
-        } catch (error) {
-            console.error('Hubo un error al obtener las solicitudes pendientes:', error);
-        }
-    };
+    const [usuarioenviadordesolicitud, setUsuarioEnviadorDeSolicitud] = useState(null)
 
     useEffect(() => {
-        obtenerSolicitudesPendientes();
+        const obtenerSolicitudes = async () => {
+            if (!token) return
+            const data = await obtenerSolicitudesPendientes(token)
+            setSolicitudesPendientes(data);
+            setUsuarioEnviadorDeSolicitud(data);
+        }
+        obtenerSolicitudes()
     }, [token]);
 
     // Aceptar solicitud de amistad

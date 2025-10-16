@@ -6,60 +6,22 @@ import { RootState } from './../../redux/store';
 import { useSelector } from 'react-redux';
 import { UsuarioData } from '../../redux/reducers';
 
+/* Peticiones Api */
+import { enviarSolicitud, fetchUsuariosRandom } from '../../peticiones/peticionesapi';
+
 export const ListaUsuarios = () => {
     const [usuarios, setUsuarios] = useState<UsuarioData[]>([]);
     const token = useSelector((state: RootState) => state.auth.token);
     const usuariousername = useSelector((state: RootState) => state.info.username);
 
     useEffect(() => {
-        const fetchUsuariosRandom = async () => {
-            try {
-                const response = await fetch('http://127.0.0.1:8000/api/usuarios/', {
-                    method: 'GET',
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json',
-                    },
-                });
-
-                if (response.ok) {
-                    const data = await response.json();
-                    setUsuarios(data);
-                } else {
-                    console.error('Error al obtener los usuarios');
-                }
-            } catch (error) {
-                console.error('Hubo un error en la solicitud:', error);
-            }
-        };
-
-        fetchUsuariosRandom();
-    }, [token]);
-
-    // Enviar una solicitud de amistad
-    const enviarSolicitud = async (usuarioId: number | null) => {
-        try {
-            const response = await fetch(`http://127.0.0.1:8000/api/amistades/${usuarioId}/enviar_solicitud/`, {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            if (response.ok) {
-                alert('Solicitud de amistad enviada');
-            } else {
-                const errorData = await response.json();
-                alert(errorData.detail || 'Error al enviar la solicitud');
-            }
-        } catch (error) {
-            console.error('Error en la solicitud de amistad:', error);
+        const obtenerUsuarios = async () => {
+            if (!token) return;
+            const data = await fetchUsuariosRandom(token);
+            setUsuarios(data)
         }
-    };
-
-
-
+        obtenerUsuarios()
+    }, [token]);
 
 
     return (
@@ -77,7 +39,7 @@ export const ListaUsuarios = () => {
                                     <p>{e.nacionalidad}</p>
                                 </div>
                                 {e.id !== null && typeof e.id === 'number' && (
-                                    <button onClick={() => enviarSolicitud(e.id)}>Agregar como amigo</button>
+                                    <button onClick={() => enviarSolicitud(token, e.id)}>Agregar como amigo</button>
                                 )}
                             </div>
                         </li>
